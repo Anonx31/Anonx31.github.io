@@ -654,6 +654,9 @@ a:hover {
     width: calc(60% - 10px);
 }
 
+.bar.git::before {
+    width: calc(70% - 10px);
+}
 /*EDUCATION SECTION*/
 
 .education .box-container {
