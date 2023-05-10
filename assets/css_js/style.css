@@ -795,10 +795,18 @@ article h3 {
   color: #ffffff;
   margin-bottom: 1rem;
 }
-.post-image {
+.img-fluid {
   max-width: 100%;
   height: auto;
+  border: 0.25px solid rgb(43, 40, 40);
 }
+
+.container-blog {
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 
 /* Set responsive styles */
 @media screen and (max-width: 767px) {
