@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Anon_x_31 | Portfolio</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/images/ME.jpeg" rel="icon">
+    <link href="assets/images/ME.jpeg" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css_js/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+    <!--Code Section Starts-->
+    <div class="container-blog">
+        <main>
+            <article class="article">
+                <h3>OverTheWire: Bandit 0</h3>
+                <p class="post-date">Posted on May 11, 2023</p>
+                <h4>Title: OverTheWire Bandit 0 Writeup: A Beginner's Journey to Mastering Linux Security</h4>
+                <h3>Introduction:</h3>
+                <p>In the vast realm of cybersecurity, there is a constant need to enhance one's knowledge and skills to
+                    stay ahead of potential threats. OverTheWire is a fantastic platform that provides a series of
+                    challenges designed to sharpen your skills in various aspects of computer security. One of the most
+                    popular challenges on OverTheWire is Bandit, which takes you through a progressive journey of
+                    mastering Linux security. In this writeup, we will explore Bandit Level 0 and unravel the mystery
+                    behind it.</p>
+                <h4>Level 0: Understanding the Basics</h4>
+                <p>The first level of Bandit serves as an introduction to the challenge and acquaints you with the
+                    platform's interface. Before diving into the challenges, let's take a moment to understand the
+                    basics. Bandit is a wargame that allows users to connect to a remote server using Secure Shell
+                    (SSH). The goal is to find the password for the next level by solving a series of puzzles or
+                    exploiting security vulnerabilities.</p>
+                <h3>Level 0 Walkthrough:</h3>
+                <p>To start the challenge, we first need to establish an SSH connection to the Bandit server using the
+                    provided credentials. In this case, the server address is <b>bandit.labs.overthewire.org</b>, and
+                    the port is set to <b>2220</b>. We can establish the connection using the SSH command in the
+                    terminal:</p>
+
+                <img src="/assets/images/blog3-con1.PNG" alt="solutoin-of-problem" class="img-fluid">
+                <p>Upon successful authentication, we enter the Bandit server, and we are greeted with a welcome
+                    message. Our goal is to retrieve the password for the next level, which is stored in a file within
+                    the home directory.</p>
+                <p>Navigating through the directories in Linux is crucial, and we can achieve this using basic commands
+                    like <b>ls</b> and <b>cd</b>. Once we are in the home directory, we can use the <b>ls</b> command to
+                    list the files. In this case, there is only one file named <b>readme</b>.</p>
+                <p>To view the contents of the <b>readme</b> file, we can use the <b>cat</b> command:</p>
+                <img src="/assets/images/blog3-con2.PNG" alt="solutoin-of-problem" class="img-fluid">
+                <p>This will display the content of the file, which is the password for the next level.</p>
+                <h3>Conclusion:</h3>
+                <p>Bandit Level 0 might seem like a straightforward challenge, but it sets the foundation for the
+                    subsequent levels. By familiarizing ourselves with basic commands such as SSH, <b>ls</b>, <b>cd</b>,
+                    and <b>cat</b>, we begin to understand the power of the Linux command-line interface. Each level in
+                    Bandit introduces new concepts and techniques, allowing us to improve our Linux security skills
+                    along the way.</p>
+                <p>OverTheWire's Bandit is an excellent platform for beginners to dive into the world of cybersecurity.
+                    It offers a hands-on learning experience, allowing users to practice their skills and gain practical
+                    knowledge. So, if you're eager to enhance your understanding of Linux security, I highly recommend
+                    embarking on the Bandit challenge. Brace yourself for the exciting journey ahead and prepare to
+                    unravel the mysteries of the command line!</p>
+                <p>Remember, the path to mastery requires perseverance and continuous learning. With each level you
+                    conquer, you'll become more adept at solving complex security puzzles. So, don't hesitate to jump in
+                    and start your Bandit adventure today!</p>
+            </article>
+        </main>
+    </div>
+
+    <!--Code Section Ends-->
+
+    <!--Preloader-->
+    <!-- <div id="preloader"></div> -->
+
+    <!--Scroll-Top-Button-->
+    <a href="blog3.html" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/css_js/main.js"></script>
+
+</body>
+
+</html>
