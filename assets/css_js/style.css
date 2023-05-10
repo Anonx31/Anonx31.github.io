@@ -757,9 +757,9 @@ a:hover {
   stroke: #32d8ee;
 }
 /*blog*/
-main {
+/* main {
   padding: 1rem;
-}
+} */
 main b {
   color: rgb(106, 211, 20);
 }
@@ -778,12 +778,12 @@ h6,
 p {
   color: #ffffff;
 }
-
+/* 
 article {
   margin-bottom: 2rem;
   border: 1px solid #ffffff;
   padding: 1rem;
-}
+} */
 
 article h3 {
   font-size: 1.5rem;
