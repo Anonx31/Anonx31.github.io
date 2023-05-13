@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Anon_x_31 | Portfolio</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/images/ME.jpeg" rel="icon">
+    <link href="assets/images/ME.jpeg" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css_js/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!--Code Section Starts-->
+    <div class="container-blog">
+        <main>
+            <article class="article">
+                <h3>HackerRank: Sum and Difference of Two Numbers</h3>
+                <p class="post-date">Posted on May 13, 2023</p>
+                <p>In this blog, we will discuss the solution of hackerrank
+                    problem Sum and Difference of Two Numbers and how to write a program for
+                    it.</p>
+
+                <h3>Code Example</h3>
+                <p>Let's begin by examining the code:</p>
+                <img src="/assets/images/blog5-code.PNG" alt="solutoin-of-problem" class="img-fluid">
+                <h3>Explanation</h3>
+                <h4>Header Files</h4>
+                <p>The program starts by including several header files: <b>stdio.h</b>, <b>string.h</b>, <b>math.h</b>,
+                    and <b>stdlib.h</b>. These
+                    files provide necessary functions and definitions for standard input/output, string manipulation,
+                    mathematical calculations, and memory allocation.</p>
+                <h4>The <b>main()</b> Function</h4>
+                <p>The <b>main()</b> function is the entry point of the program. It is where the execution begins.
+                    Inside the
+                    <b>main()</b> function, we have the following variables:
+                </p>
+                <ul>
+                    <li><b>int a, b;</b> declares two integer variables <b>a</b> and <b>b</b>.</li>
+                    <li><b>float c, d;</b> declares two float variable <b>c</b> and <b>d</b>,</li>
+                </ul>
+                <h4>Reading Input Values</h4>
+                <p>The <b>scanf</b> function is used to read input values from the user. It takes a format string and
+                    the
+                    addresses of variables where the input values should be stored. In our code, the format string is
+                    <b>%d%d%f%f</b>, which specifies that we expect four values to be read: two integers <b>(%d)</b>
+                    followed by two
+                    floats <b>(%f)</b>.
+                </p>
+                <p>The addresses of variables <b>a</b>, <b>b</b>, <b>c</b>, and <b>d</b> are passed as arguments to
+                    <b>scanf()</b>, so the values entered
+                    by the user will be stored in these variables.</p>
+                <h4>Performing Arithmetic Operations</h4>
+                <p>Once the input values are read, we proceed to perform arithmetic operations on them. The code uses
+                    the <b>printf()</b> function to display the results. Let's break down the two <b>printf()</b> statements:</p>
+                <ol>
+                    <li><b>printf("%d %d\n", a + b, a - b);</b></li>
+                    <ul>
+                        <li>This line prints the sum and difference of the integer variables <b>a</a></b> and <b>b</b>.</li>
+                        <li>The format string <b>"%d %d\n"</b> specifies that two integers should be printed, separated by a space.</li>
+                        <li>The expressions <b>a + b</b> and <b>a - b</b> calculate the sum and difference, respectively.</li>
+                        <li>The resulting values are substituted in the format string and displayed on the console.</li>
+                        <h5>Output on the console:</h5>
+                        <img src="/assets/images/blog5-output1.PNG" alt="solutoin-of-problem" class="img-fluid">
+                        
+                    </ul>
+                    <li><b>printf("%.1f %.1f", c + d, c - d);</b></li>
+                    <ul>
+                        <li>This line prints the sum and difference of the float variables
+                            <b>c</b> and <b>d</b>.</li>
+                        <li>The format string <b>"%.1f %.1f"</b> indicates that two floating-point numbers with one decimal place should be printed, separated by a space.</li>
+                        <li>The expressions <b>c + b</b> and <b>c - d</b> compute the sum and difference, respectively.</li>
+                        <li>The results are formatted according to the format string and displayed on the console.</li>
+                        <h5>Output on the console:</h5>
+                        <img src="/assets/images/blog5-output2.PNG" alt="solutoin-of-problem" class="img-fluid">
+                    </ul>
+                </ol>
+
+            </article>
+        </main>
+    </div>
+    <!--Code Section Ends-->
+
+    <!--Preloader-->
+    <!-- <div id="preloader"></div> -->
+
+    <!--Scroll-Top-Button-->
+    <a href="blog1.html5" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="/assets/css_js/main.js"></script>
+
+</body>
+
+</html>
