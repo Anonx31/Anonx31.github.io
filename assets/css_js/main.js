@@ -1,4 +1,3 @@
-
 (function () {
   "use strict";
 
@@ -131,71 +130,140 @@
       }
   });
 
-  /*Intro type effect*/
-  const typed = select('.typed')
-  if (typed) {
-      let typed_strings = typed.getAttribute('data-typed-items')
-      typed_strings = typed_strings.split(',')
-      new Typed('.typed', {
-          strings: typed_strings,
-          loop: true,
-          typeSpeed: 100,
-          backSpeed: 50,
-          backDelay: 2000
-      });
-  }
+  
 
   /*Initiate portfolio lightbox*/
   const portfolioLightbox = GLightbox({
       selector: '.portfolio-lightbox'
   });
 
-  /*Testimonials slider*/
-  new Swiper('.testimonials-slider', {
-      speed: 600,
-      loop: true,
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-      },
-      slidesPerView: 'auto',
-      pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-      }
-  });
-
-  /*Portfolio details slider*/
-  new Swiper('.portfolio-details-slider', {
-      speed: 400,
-      loop: true,
-      autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-      },
-      pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets',
-          clickable: true
-      }
-  });
-
-  /*Preloader*/
-  let preloader = select('#preloader');
-  if (preloader) {
-      window.addEventListener('load', () => {
-          preloader.remove()
-      });
-  }
-
   /*Initiate Pure Counter*/
   new PureCounter();
 
 })()
-// ——————————————————————————————————————————————————
+document.addEventListener("DOMContentLoaded", function () {
+    const blogTitle = document.getElementById("blog-title");
+    const blogContent = document.getElementById("blog-content");
+    const blogPassword = document.getElementById("blog-password");
+    const submitBlog = document.getElementById("submit-blog");
+    const blogPosts = document.getElementById("blog-posts");
+    const imageUpload = document.getElementById("image-upload");
+  
+    // Modal Elements
+    const modal = document.getElementById("blog-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalBody = document.getElementById("modal-body");
+    const closeModal = document.getElementById("close-modal");
+  
+    // Formatting Controls
+    document.getElementById("bold-btn").addEventListener("click", function () {
+      formatText("bold");
+    });
+  
+    document.getElementById("italic-btn").addEventListener("click", function () {
+      formatText("italic");
+    });
+  
+    document.getElementById("underline-btn").addEventListener("click", function () {
+      formatText("underline");
+    });
+  
+    document.getElementById("image-btn").addEventListener("click", function () {
+      imageUpload.click();
+    });
+  
+    imageUpload.addEventListener("change", function () {
+      const file = imageUpload.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = `<img src="${e.target.result}" alt="Uploaded Image">`;
+          blogContent.value += img;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  
+    function formatText(command) {
+      document.execCommand(command, false, null);
+      blogContent.focus(); // Keep the textarea focused
+    }
+  
+    // Submit Blog Post
+    submitBlog.addEventListener("click", function () {
+      const title = blogTitle.value.trim();
+      const content = blogContent.value.trim();
+      const password = blogPassword.value.trim();
+  
+      if (title === "" || content === "") {
+        alert("Please fill in the title and content!");
+        return;
+      }
+  
+      if (password !== "Luffy@31") {
+        alert("Incorrect password! Please enter the correct password to post.");
+        return;
+      }
+  
+      // Get current date and time
+      const now = new Date();
+      const dateTimeString = now.toLocaleString();
+  
+      // Create a new blog post
+      const postDiv = document.createElement("div");
+      postDiv.className = "blog-post";
+      postDiv.innerHTML = `
+        <h3>${title}</h3>
+        <small>Posted on: ${dateTimeString}</small>
+        <button class="delete-btn">🗑️</button>
+      `;
+  
+      // Add click event to open modal
+      postDiv.addEventListener("click", function (e) {
+        if (!e.target.classList.contains("delete-btn")) {
+          modal.style.display = "block";
+          modalTitle.textContent = title;
+          modalBody.innerHTML = content;
+        }
+      });
+  
+      // Add delete functionality
+      const deleteBtn = postDiv.querySelector(".delete-btn");
+      deleteBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent modal from opening
+        const deletePassword = prompt("Enter password to delete this blog post:");
+        if (deletePassword === "Luffy@31") {
+          blogPosts.removeChild(postDiv);
+          alert("Blog post deleted successfully!");
+        } else {
+          alert("Incorrect password! Deletion failed.");
+        }
+      });
+  
+      blogPosts.appendChild(postDiv);
+  
+      // Clear the form
+      blogTitle.value = "";
+      blogContent.value = "";
+      blogPassword.value = "";
+      alert("Blog posted successfully!");
+    });
+  
+    // Close Modal
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  
+    // Close modal when clicking outside
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
 // TextScramble
-// ——————————————————————————————————————————————————
+
 
 class TextScramble {
   constructor(el) {
@@ -251,9 +319,7 @@ class TextScramble {
   }
 }
 
-// ——————————————————————————————————————————————————
 // Example
-// ——————————————————————————————————————————————————
 
 const phrases = [
   'a programmer,',
@@ -276,6 +342,4 @@ const next = () => {
 }
 
 next()
-
-
 
