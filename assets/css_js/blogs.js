@@ -1,9 +1,19 @@
 // blogs.js
 const blogs = {
-  blog2: {
-    title: "Top 5 Career Paths for BSc IT Graduates in 2025",
-    date: "March 10, 2025",
-    content: `
+    blog3: {
+        title: "Getting started with My Fav Language [Python]",
+        date: "March 16, 2025",
+        content: `
+          <h1>Getting Started with Python: A Beginner's Guide</h1><p>Python is one of the most popular programming languages in the world, and for good reason. It's versatile, easy to learn, and has a vast ecosystem of libraries and frameworks that make it suitable for a wide range of applications, from web development to data science, machine learning, and automation. If you're new to programming or just starting with Python, this guide will help you get up and running quickly.</p><h2>Why Learn Python?</h2> <p>Before diving into the technical details, let's talk about why Python is a great choice for beginners and experienced developers alike:</p> <ul> <li><strong>Easy to Learn:</strong> Python's syntax is simple and readable, making it an excellent choice for beginners.</li> <li><strong>Versatile:</strong> Python can be used for web development, data analysis, artificial intelligence, scientific computing, and more.</li> <li><strong>Large Community:</strong> Python has a massive and active community, which means you'll find plenty of resources, tutorials, and support.</li> <li><strong>Cross-Platform:</strong> Python runs on Windows, macOS, Linux, and even mobile platforms.</li> <li><strong>Rich Ecosystem:</strong> Python has thousands of libraries and frameworks, such as Django, Flask, NumPy, Pandas, and TensorFlow, to help you build almost anything.</li> </ul><h2>Installing Python</h2> <p>To get started with Python, you'll need to install it on your computer. Here's how:</p><h3>1. Download Python</h3> <p>Visit the official Python website: <a href="https://www.python.org/">python.org</a>. Go to the Downloads section and choose the version suitable for your operating system (Windows, macOS, or Linux). Python 3.x is recommended, as Python 2.x is no longer supported.</p><h3>2. Install Python</h3> <p>Run the installer and follow the instructions. Make sure to check the box that says <strong>"Add Python to PATH"</strong> during installation. This makes it easier to run Python from the command line.</p><h3>3. Verify Installation</h3> <p>Open your terminal or command prompt and type:</p> <pre><code>python --version</code></pre> <p>If Python is installed correctly, you'll see the version number (e.g., <code>Python 3.11.4</code>).</p><h2>Writing Your First Python Program</h2> <p>Now that Python is installed, let's write a simple program to get a feel for the language.</p><h3>1. Using the Python Interpreter</h3> <p>Open your terminal or command prompt and type <code>python</code> to start the Python interpreter. Type the following code and press Enter:</p> <pre><code>print("Hello, World!")</code></pre> <p>You should see the output: <code>Hello, World!</code></p><h3>2. Writing a Script</h3> <p>Open a text editor (e.g., Notepad, VS Code, or PyCharm). Create a new file and save it as <code>hello.py</code>. Add the following code to the file:</p> <pre><code>print("Hello, World!")</code></pre> <p>Save the file and run it from the terminal:</p> <pre><code>python hello.py</code></pre> <p>You should see the same output: <code>Hello, World!</code></p><h2>Python Basics</h2> <p>Here are some fundamental concepts to get you started with Python:</p><h3>1. Variables and Data Types</h3> <p>Python supports various data types, such as integers, floats, strings, and booleans. Example:</p> <pre><code>name = "Alice" # String age = 25 # Integer height = 5.6 # Float is_student = True # Boolean</code></pre><h3>2. Control Structures</h3> <p>Python uses indentation to define blocks of code. Example of an <code>if</code> statement:</p> <pre><code>if age >= 18: print("You are an adult.") else: print("You are a minor.")</code></pre><h3>3. Loops</h3> <p>Python supports <code>for</code> and <code>while</code> loops. Example of a <code>for</code> loop:</p> <pre><code>for i in range(5): print(i)</code></pre><h3>4. Functions</h3> <p>Functions are defined using the <code>def</code> keyword. Example:</p> <pre><code>def greet(name): print(f"Hello, {name}!")
+greet("Alice")</code></pre>
+
+<h3>5. Lists and Dictionaries</h3> <p>Lists are ordered collections of items, and dictionaries are key-value pairs. Example:</p> <pre><code>fruits = ["apple", "banana", "cherry"] # List person = {"name": "Alice", "age": 25} # Dictionary</code></pre><h2>Next Steps</h2> <p>Once you're comfortable with the basics, you can explore more advanced topics and libraries:</p> <ul> <li><strong>Web Development:</strong> Learn frameworks like Django or Flask.</li> <li><strong>Data Science:</strong> Explore libraries like NumPy, Pandas, and Matplotlib.</li> <li><strong>Machine Learning:</strong> Dive into TensorFlow, PyTorch, or Scikit-learn.</li> <li><strong>Automation:</strong> Use Python to automate repetitive tasks with libraries like <code>os</code>, <code>shutil</code>, and <code>smtplib</code>.</li> </ul><h2>Resources to Learn Python</h2> <p>Here are some great resources to continue your Python journey:</p> <ul> <li><strong>Official Python Documentation:</strong> <a href="https://docs.python.org/3/">docs.python.org</a></li> <li><strong>Online Courses:</strong> Platforms like <a href="https://www.coursera.org/">Coursera</a>, <a href="https://www.udemy.com/">Udemy</a>, and <a href="https://www.codecademy.com/">Codecademy</a> offer Python courses.</li> <li><strong>Books:</strong> "Automate the Boring Stuff with Python" by Al Sweigart is a great beginner-friendly book.</li> <li><strong>Practice:</strong> Websites like <a href="https://leetcode.com/">LeetCode</a>, <a href="https://www.hackerrank.com/">HackerRank</a>, and <a href="https://www.codewars.com/">Codewars</a> offer coding challenges to sharpen your skills.</li> </ul><h2>Conclusion</h2> <p>Python is a powerful and beginner-friendly language that opens the door to countless opportunities in programming. Whether you're building websites, analyzing data, or creating machine learning models, Python has the tools and libraries to help you succeed. Start small, practice regularly, and don't be afraid to experiment. Happy coding!</p><p>Feel free to share your thoughts or questions in the comments below. If you found this guide helpful, let me know what topic you'd like me to cover next! 🐍✨</p>
+        `
+    },
+    blog2: {
+        title: "Top 5 Career Paths for BSc IT Graduates in 2025",
+        date: "March 10, 2025",
+        content: `
       <h1>Top 5 Career Paths for BSc IT Graduates in 2025</h1>
 
     <p>As a BSc IT graduate, you have a wide range of career opportunities in the ever-evolving tech industry. The demand for IT professionals continues to grow, and by 2025, certain career paths are expected to be particularly lucrative and rewarding. Here are the top 5 career paths for BSc IT graduates in 2025:</p>
@@ -48,11 +58,11 @@ const blogs = {
 
     <p>Start exploring these career paths today and take the first step toward a successful future in IT!</p>
     `
-  },
-  blog1: {
-    title: "Python vs Java: Which Language Should You Learn First?",
-    date: "March 8, 2025",
-    content: `
+    },
+    blog1: {
+        title: "Python vs Java: Which Language Should You Learn First?",
+        date: "March 8, 2025",
+        content: `
 <h1>Python vs Java: Which Language Should You Learn First?</h1>
 
     <p>Choosing the right programming language to learn can be a daunting task, especially for beginners. Two of the most popular languages, <strong>Python</strong> and <strong>Java</strong>, often come up in this debate. In this blog, we’ll compare Python and Java to help you decide which one is better suited for your needs.</p>
@@ -102,5 +112,5 @@ const blogs = {
 
     <p>Happy coding! 😊</p>
     `
-  }
+    }
 };
