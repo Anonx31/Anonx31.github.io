@@ -249,15 +249,15 @@ const next = () => {
 }
 // Certificate Images
 const certificateImages = {
-  cisco: '/anonx31.github.io/assets/images/cisco.png',
-  ehe: '/anonx31.github.io/assets/images/ehe.png',
-  nde: '/anonx31.github.io/assets/images/nde.jpg',
-  tcs: '/anonx31.github.io/assets/images/tcs.png',
-  mastercard: '/anonx31.github.io/assets/mastercard.png',
+  cisco: '/assets/images/cisco.png',
+  ehe: '/assets/images/ehe.png',
+  nde: '/assets/images/nde.png',
+  tcs: '/assets/images/tcs.png',
+  mastercard: '/assets/images/mastercard.png',
   freecodecamp: '/anonx31.github.io/assets/images/freecodecamp.png',
-  css: '/anonx31.github.io/assets/images/css.png',
-  sql: '/anonx31.github.io/assets/images/sql.png',
-  wogleTech: '/anonx31.github.io/assets/images/wogleTech.png'
+  css: '/assets/images/css.png',
+  sql: '/assets/images/sql.png',
+  wogleTech: '/assets/images/wogleTech.png'
 };
 
 // Open Modal Function
