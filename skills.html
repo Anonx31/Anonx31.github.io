@@ -40,14 +40,13 @@
                     <li><a class="active" href="skills.html">Skills</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
-
-                    <!-- <li><a href="blog.html">Blog</a></li> -->
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
         </div>
     </header>
     <!--Header Section Ends-->
+
     <!--Code Section Starts-->
     <section id="about" class="about-mf sect-pt4 route">
         <div class="container">
@@ -57,44 +56,58 @@
                         <div class="code" id="code">
                             <div class="box-container">
 
+                                <!-- Skills Section -->
                                 <section id="skills" class="container mt-5">
                                     <h2>Skills</h2>
                                     <ul class="skills-list">
-                                      <li><span class="skill-category">Programming:</span> Python, SQL, HTML, CSS, JavaScript</li>
-                                      <li><span class="skill-category">Domains:</span> Data Analysis, Cybersecurity, Web Development</li>
-                                      <li><span class="skill-category">System:</span> Linux Administration, System Hardening</li>
+                                        <li><span class="skill-category">Programming:</span> Python, SQL, HTML, CSS, JavaScript</li>
+                                        <li><span class="skill-category">Domains:</span> Data Analysis, Cybersecurity, Web Development</li>
+                                        <li><span class="skill-category">System:</span> Linux Administration, System Hardening</li>
                                     </ul>
-                                  </section>
-                                  
-                                  <!-- Tools Section -->
-                                  <section id="tools" class="container mt-5">
+                                </section>
+
+                                <!-- Tools Section -->
+                                <section id="tools" class="container mt-5">
                                     <h2>Tools</h2>
                                     <ul class="tools-list">
-                                      <li><span class="tool-category">Development:</span> VS Code, Jupyter Notebook, Git, Linux Terminal</li>
-                                      <li><span class="tool-category">Data Visualization:</span> Power BI, Excel, Tableau</li>
-                                      <li><span class="tool-category">Cybersecurity:</span> Burp Suite, Nmap, Wireshark</li>
+                                        <li><span class="tool-category">Development:</span> VS Code, Jupyter Notebook, Git, Linux Terminal</li>
+                                        <li><span class="tool-category">Data Visualization:</span> Power BI, Excel, Tableau</li>
+                                        <li><span class="tool-category">Cybersecurity:</span> Burp Suite, Nmap, Wireshark</li>
                                     </ul>
-                                  </section>
-                                  
-                                  <!-- Experience Section -->
-                                  <section id="experience" class="container mt-5">
+                                </section>
+
+                                <!-- Experience Section -->
+                                <section id="experience" class="container mt-5">
                                     <h2>Experience</h2>
                                     <div class="experience-item">
-                                      <h4>Cybersecurity Intern - Wogle Tech</h4>
-                                      <p>Conducted security assessments and vulnerability testing.</p>
+                                        <h4  onclick="openModal('wogleTech')">Cybersecurity Intern - Wogle Tech</h4>
+                                        <p>Conducted security assessments and vulnerability testing.</p>
                                     </div>
-                                  </section>
-                                  
-                                  <!-- Certifications Section -->
-                                  <section id="certifications" class="container mt-5">
-                                    <h2>Certifications</h2>
-                                    <ul class="certifications-list">
-                                      <li><span class="certification-category">Programming:</span> Basic Python - HackerRank</li>
-                                      <li><span class="certification-category">Database:</span> Basic SQL - HackerRank</li>
-                                      <li><span class="certification-category">Cybersecurity:</span> Ethical Hacking Essentials - EC-Council</li>
-                                      <li><span class="certification-category">Networking:</span> Network Defense Essentials - EC-Council</li>
-                                    </ul>
-                                  </section>
+                                </section>
+
+                                <!-- Certifications Section -->
+                                <section id="certifications" class="container mt-5">
+                                  <h2>Certifications</h2>
+                                  <ul class="certifications-list">
+                                      <li onclick="openModal('cisco')">🏆 Cisco's Introduction to Cyber Security — Completed</li>
+                                      <li onclick="openModal('ehe')">🔒 EC-Council CodeRed: Ethical Hacking Essentials (EHE) — Completed</li>
+                                      <li onclick="openModal('nde')">🛡️ EC-Council CodeRed: Network Defense Essentials (NDE) — Completed</li>
+                                      <li onclick="openModal('tcs')">💼 Tata Consultancy Services (TCS) Cybersecurity Job Simulation — Completed</li>
+                                      <li onclick="openModal('mastercard')">💳 Mastercard Cybersecurity Job Simulation — Completed</li>
+                                      <li onclick="openModal('freecodecamp')">🌐 FreeCodeCamp: Responsive Web Design Certification — Completed</li>
+                                      <li onclick="openModal('css')">🐍 HackerRank: Basic Python — Completed</li>
+                                      <li onclick="openModal('sql')">🗂 HackerRank: Basic SQL — Completed</li>
+                                  </ul>
+                              </section>
+                          
+                              <!-- Modal Structure -->
+                              <div id="modal" onclick="closeModal()">
+                                  <div id="modal-content">
+                                      <span id="modal-close" onclick="closeModal()">&times;</span>
+                                      <img id="modal-img" src="" alt="Certificate">
+                                  </div>
+                              </div>
+                          
 
                             </div>
                         </div>

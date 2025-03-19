@@ -247,6 +247,37 @@ const next = () => {
   })
   counter = (counter + 1) % phrases.length
 }
+// Certificate Images
+const certificateImages = {
+  cisco: '/anonx31.github.io/assets/images/cisco.png',
+  ehe: '/anonx31.github.io/assets/images/ehe.png',
+  nde: '/anonx31.github.io/assets/images/nde.jpg',
+  tcs: '/anonx31.github.io/assets/images/tcs.png',
+  mastercard: '/anonx31.github.io/assets/mastercard.png',
+  freecodecamp: '/anonx31.github.io/assets/images/freecodecamp.png',
+  css: '/anonx31.github.io/assets/images/css.png',
+  sql: '/anonx31.github.io/assets/images/sql.png',
+  wogleTech: '/anonx31.github.io/assets/images/wogleTech.png'
+};
+
+// Open Modal Function
+function openModal(certId) {
+  const modal = document.getElementById('modal');
+  const img = document.getElementById('modal-img');
+  img.src = certificateImages[certId];
+  modal.style.display = "flex";
+}
+
+// Close Modal Function
+function closeModal() {
+  document.getElementById('modal').style.display = "none";
+}
+
+// Close modal if user clicks outside the content
+window.onclick = function (event) {
+  const modal = document.getElementById('modal');
+  if (event.target === modal) closeModal();
+};
 
 next()
 
