@@ -4,7 +4,7 @@
 /*GENERAL*/
 
 body {
-  background-color: #1E1209;
+  background-color: #19192b;
   color: white;
 }
 
@@ -74,7 +74,7 @@ a:hover {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
-  background-color: #2E1B0E;
+  background-color: #13111e;
   margin-bottom: 3rem;
   z-index: 2;
   color: white;
@@ -247,7 +247,7 @@ a:hover {
 }
 
 #header .logo a {
-  color: rgb(41, 209, 145);
+  color:#dfa1a8;
 }
 
 #header .logo img {
@@ -287,7 +287,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #9d88d6;
   font-size: 16px;
   font-weight: 600;
   padding: 0;
@@ -313,7 +313,7 @@ a:hover {
   bottom: -6px;
   left: 0;
   width: 0;
-  background-color: #ffffff;
+  background-color: #756895;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -335,7 +335,7 @@ a:hover {
 /*NAVIGATION BAR(MOBILE)*/
 
 .mobile-nav-toggle {
-  color: #ffffff;
+  color: #c2acea;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -379,7 +379,7 @@ a:hover {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #5B361B;
+  background-color: #393852;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -398,7 +398,7 @@ a:hover {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: rgb(255, 255, 255);
+  color: #9d88d6;
 }
 
 /*HERO SECTION*/
@@ -406,7 +406,8 @@ a:hover {
 .hero {
   height: 100vh;
   position: relative;
-  color: #fff;
+  color: #8a91aa;
+  font-size: 1.5rem;
 }
 
 .hero .hero-content {
@@ -415,7 +416,7 @@ a:hover {
 }
 
 .hero .hero-title {
-  color: #fff;
+  color: #c2acea;
   font-weight: 600;
   font-size: 3rem;
 }
@@ -562,21 +563,21 @@ a:hover {
 
 .projects h2 {
   font-size: 2.5rem;
-  color: #40cdf0; /* Accent color for headings */
+  color: #c2acea; /* Accent color for headings */
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .projects p {
   font-size: 1.1rem;
-  color: #eee; /* Light text color */
+  color: #8a91aa; /* Light text color */
   text-align: center;
   margin-bottom: 3rem;
 }
 
 /* Project Cards */
 .project-card {
-  background-color: #2a2b2f; /* Dark card background */
+  background-color: #393852; /* Dark card background */
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -600,13 +601,13 @@ a:hover {
 
 .project-card h4 {
   font-size: 1.5rem;
-  color: #a9eb8f; /* Accent color for project titles */
+  color: #dfa1a8; /* Accent color for project titles */
   margin-bottom: 1rem;
 }
 
 .project-card p {
   font-size: 1rem;
-  color: #eee; /* Light text color */
+  color: #cdd2ee; /* Light text color */
   margin-bottom: 1.5rem;
 }
 
@@ -657,7 +658,7 @@ a:hover {
 /* Section Headings */
 #skills h2, #tools h2, #experience h2, #certifications h2 {
   font-size: 2rem;
-  color: #40cdf0;
+  color: #c2acea;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -671,7 +672,7 @@ a:hover {
 
 #skills li, #tools li, #certifications li {
   font-size: 1.1rem;
-  color: #eee;
+  color: #8a91aa;
   margin-bottom: 0.75rem;
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.05);
@@ -686,7 +687,7 @@ a:hover {
 /* Skill, Tool, and Certification Categories */
 .skill-category, .tool-category, .certification-category {
   font-weight: bold;
-  color: #a9eb8f;
+  color: #dfa1a8;
   margin-right: 0.5rem;
 }
 
@@ -710,13 +711,13 @@ a:hover {
 
 .experience-item h4 {
   font-size: 1.5rem;
-  color: #a9eb8f;
+  color: #dfa1a8;
   margin-bottom: 0.5rem;
 }
 
 .experience-item p {
   font-size: 1rem;
-  color: #eee;
+  color: #8a91aa;
   line-height: 1.5;
 }
 
@@ -746,7 +747,7 @@ a:hover {
 }
 
 .blog-item {
-  background: #4C2D17;
+  background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -760,11 +761,11 @@ a:hover {
 .blog-item h2 {
   margin: 0;
   font-size: 1.5em;
-  color: #ffffff;
+  color: #dfa1a8;
 }
 
 .blog-date {
-  color: #ffffff;
+  color: #8a91aa;
   font-size: 0.9em;
 }
 
@@ -783,8 +784,9 @@ a:hover {
 }
 
 .modal-content {
-  background: #ffffff;
-  color: #34495f;
+  background: rgba(255, 255, 255, 0.01);
+  color:   color: #b3b6be;
+  ;
   padding: 20px;
   border-radius: 8px;
   max-width: 800px;
@@ -796,16 +798,17 @@ a:hover {
 }
 
 .modal-content h1,h2,h3{
-  color: #2c3e50;
+  color: #dfa1a8;
 }
 
 .modal-content p{
-  color: #34495e;
+  color: #b3b6be;
 }
 
 .modal-content code {
-  background-color: #f4f4f4;
-  color: #c0392b;
+  background-color: #26272c;
+  color: #b3b6be;
+  ;
   padding: 2px 4px;
   border-radius: 4px;
   font-family: monospace;
@@ -838,7 +841,7 @@ a:hover {
 }
 
 #modal-date {
-  color: #777;
+  color: #8a91aa;
   font-size: 0.9em;
   margin-bottom: 20px;
 }
@@ -882,7 +885,11 @@ a:hover {
 
 #contact h2 {
   font-size: 2.5rem;
-  color: #40cdf0;
+  color: #c2acea;
+}
+
+#contact h4{
+  color: #c2acea;
 }
 
 #contact p {
@@ -896,7 +903,7 @@ a:hover {
 
 .contact-form label {
   font-size: 1rem;
-  color: #eee;
+  color: rgba(255, 255, 255, 0.05);
 }
 
 .contact-form input, .contact-form textarea {
@@ -904,8 +911,8 @@ a:hover {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #4C2D17;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.05);
 }
 
 .contact-form button {
