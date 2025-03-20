@@ -785,7 +785,7 @@ a:hover {
 
 .modal-content {
   background: rgba(255, 255, 255, 0.01);
-  color:   color: #b3b6be;
+  color:  #b3b6be;
   ;
   padding: 20px;
   border-radius: 8px;
@@ -894,7 +894,7 @@ a:hover {
 
 #contact p {
   font-size: 1.1rem;
-  color: #eee;
+  color: #8a91aa;
 }
 
 .contact-form .form-group {
@@ -903,7 +903,7 @@ a:hover {
 
 .contact-form label {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.05);
+  color: #e9dede;
 }
 
 .contact-form input, .contact-form textarea {
