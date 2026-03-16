@@ -1,284 +1,525 @@
-(function () {
-  "use strict";
+/* =========================
+   PORTFOLIO MAIN SCRIPT
+========================= */
 
-  /*Easy selector helper function*/
-  const select = (el, all = false) => {
-      el = el.trim()
-      if (all) {
-          return [...document.querySelectorAll(el)]
-      } else {
-          return document.querySelector(el)
-      }
-  }
+(function(){
 
-  /*Easy event listener function*/
-  const on = (type, el, listener, all = false) => {
-      let selectEl = select(el, all)
-      if (selectEl) {
-          if (all) {
-              selectEl.forEach(e => e.addEventListener(type, listener))
-          } else {
-              selectEl.addEventListener(type, listener)
-          }
-      }
-  }
+"use strict";
 
-  /*Easy on scroll event listener*/
-  const onscroll = (el, listener) => {
-      el.addEventListener('scroll', listener)
-  }
+/* =========================
+   SELECT HELPER
+========================= */
 
-  /*Navbar links active state on scroll*/
-  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
-      let position = window.scrollY + 200
-      navbarlinks.forEach(navbarlink => {
-          if (!navbarlink.hash) return
-          let section = select(navbarlink.hash)
-          if (!section) return
-          if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-              navbarlink.classList.add('active')
-          } else {
-              navbarlink.classList.remove('active')
-          }
-      })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+const select=(el,all=false)=>{
 
-  /*Scrolls to an element with header offset*/
-  const scrollto = (el) => {
-      let header = select('#header')
-      let offset = header.offsetHeight
+el=el.trim()
 
-      if (!header.classList.contains('header-scrolled')) {
-          offset -= 16
-      }
+if(all){
 
-      let elementPos = select(el).offsetTop
-      window.scrollTo({
-          top: elementPos - offset,
-          behavior: 'smooth'
-      })
-  }
+return [...document.querySelectorAll(el)]
 
-  /*Toggle .header-scrolled class to #header when page is scrolled*/
-  let selectHeader = select('#header')
-  if (selectHeader) {
-      const headerScrolled = () => {
-          if (window.scrollY > 100) {
-              selectHeader.classList.add('header-scrolled')
-          } else {
-              selectHeader.classList.remove('header-scrolled')
-          }
-      }
-      window.addEventListener('load', headerScrolled)
-      onscroll(document, headerScrolled)
-  }
-
-  /*Back to top button*/
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-      const toggleBacktotop = () => {
-          if (window.scrollY > 100) {
-              backtotop.classList.add('active')
-          } else {
-              backtotop.classList.remove('active')
-          }
-      }
-      window.addEventListener('load', toggleBacktotop)
-      onscroll(document, toggleBacktotop)
-  }
-
-  /*Mobile nav toggle*/
-  on('click', '.mobile-nav-toggle', function (e) {
-      select('#navbar').classList.toggle('navbar-mobile')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-  })
-
-  /*Mobile nav dropdowns activate*/
-  on('click', '.navbar .dropdown > a', function (e) {
-      if (select('#navbar').classList.contains('navbar-mobile')) {
-          e.preventDefault()
-          this.nextElementSibling.classList.toggle('dropdown-active')
-      }
-  }, true)
-
-  /*Scrool with ofset on links with a class name .scrollto*/
-  on('click', '.scrollto', function (e) {
-      if (select(this.hash)) {
-          e.preventDefault()
-
-          let navbar = select('#navbar')
-          if (navbar.classList.contains('navbar-mobile')) {
-              navbar.classList.remove('navbar-mobile')
-              let navbarToggle = select('.mobile-nav-toggle')
-              navbarToggle.classList.toggle('bi-list')
-              navbarToggle.classList.toggle('bi-x')
-          }
-          scrollto(this.hash)
-      }
-  }, true)
-
-  /*Scroll with ofset on page load with hash links in the url*/
-  window.addEventListener('load', () => {
-      if (window.location.hash) {
-          if (select(window.location.hash)) {
-              scrollto(window.location.hash)
-          }
-      }
-  });
-
-  
-
-  /*Initiate portfolio lightbox*/
-  const portfolioLightbox = GLightbox({
-      selector: '.portfolio-lightbox'
-  });
-
-  /*Initiate Pure Counter*/
-  new PureCounter();
-
-})()
-
-
-// Function to open the modal
-function openModal1(blogId) {
-  const modal = document.getElementById('modal');
-  const blog = blogs[blogId]; // Access the blog data from the external blogs.js file
-
-  document.getElementById('modal-title').textContent = blog.title;
-  document.getElementById('modal-date').textContent = blog.date;
-  document.getElementById('modal-body').innerHTML = blog.content;
-
-  modal.style.display = "flex";
 }
 
-// Function to close the modal
-function closeModal() {
-  const modal = document.getElementById('modal');
-  modal.style.display = "none";
+return document.querySelector(el)
+
 }
 
-// Close modal if user clicks outside the modal content
-window.onclick = function (event) {
-  const modal = document.getElementById('modal');
-  if (event.target === modal) {
-    closeModal();
-  }
-};
 
-// TextScramble
+/* =========================
+   EVENT HELPER
+========================= */
 
+const on=(type,el,listener,all=false)=>{
 
-class TextScramble {
-  constructor(el) {
-    this.el = el
-    this.chars = '!<>-_\\/[]{}—=+*^?#________'
-    this.update = this.update.bind(this)
-  }
-  setText(newText) {
-    const oldText = this.el.innerText
-    const length = Math.max(oldText.length, newText.length)
-    const promise = new Promise((resolve) => this.resolve = resolve)
-    this.queue = []
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || ''
-      const to = newText[i] || ''
-      const start = Math.floor(Math.random() * 40)
-      const end = start + Math.floor(Math.random() * 40)
-      this.queue.push({ from, to, start, end })
-    }
-    cancelAnimationFrame(this.frameRequest)
-    this.frame = 0
-    this.update()
-    return promise
-  }
-  update() {
-    let output = ''
-    let complete = 0
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i]
-      if (this.frame >= end) {
-        complete++
-        output += to
-      } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar()
-          this.queue[i].char = char
-        }
-        output += `<span class="dud">${char}</span>`
-      } else {
-        output += from
-      }
-    }
-    this.el.innerHTML = output
-    if (complete === this.queue.length) {
-      this.resolve()
-    } else {
-      this.frameRequest = requestAnimationFrame(this.update)
-      this.frame++
-    }
-  }
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)]
-  }
+let elements=select(el,all)
+
+if(!elements)return
+
+if(all){
+
+elements.forEach(e=>e.addEventListener(type,listener))
+
+}else{
+
+elements.addEventListener(type,listener)
+
 }
 
-// Example
+}
 
-const phrases = [
-  'a programmer,',
-  'cybersecurity enthusiast,',
-  'an open source learner,',
-  'a web developer,',
-  'a problem handler,',
-  'a computer geek.',
+
+/* =========================
+   NAVBAR ACTIVE LINK
+========================= */
+
+let navbarlinks=select('#navbar .scrollto',true)
+
+const navbarlinksActive=()=>{
+
+let position=window.scrollY+200
+
+navbarlinks.forEach(navbarlink=>{
+
+if(!navbarlink.hash)return
+
+let section=select(navbarlink.hash)
+
+if(!section)return
+
+if(position>=section.offsetTop &&
+position<=section.offsetTop+section.offsetHeight){
+
+navbarlink.classList.add('active')
+
+}
+
+else{
+
+navbarlink.classList.remove('active')
+
+}
+
+})
+
+}
+
+window.addEventListener('load',navbarlinksActive)
+
+document.addEventListener('scroll',navbarlinksActive)
+
+
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
+const scrollto=(el)=>{
+
+let header=select('#header')
+
+if(!header)return
+
+let offset=header.offsetHeight
+
+let elementPos=select(el).offsetTop
+
+window.scrollTo({
+
+top:elementPos-offset,
+
+behavior:'smooth'
+
+})
+
+}
+
+
+on('click','.scrollto',function(e){
+
+if(select(this.hash)){
+
+e.preventDefault()
+
+scrollto(this.hash)
+
+}
+
+},true)
+
+
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+on('click','.mobile-nav-toggle',function(){
+
+let navbar=select('#navbar')
+
+navbar.classList.toggle('navbar-mobile')
+
+this.classList.toggle('bi-list')
+
+this.classList.toggle('bi-x')
+
+})
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+let backtotop=select('.back-to-top')
+
+if(backtotop){
+
+const toggle=()=>{
+
+if(window.scrollY>100){
+
+backtotop.classList.add('active')
+
+}
+
+else{
+
+backtotop.classList.remove('active')
+
+}
+
+}
+
+window.addEventListener('load',toggle)
+
+document.addEventListener('scroll',toggle)
+
+}
+
+})();
+
+
+
+/* =========================
+   BLOG MODAL
+========================= */
+
+/* LOAD BLOG CARDS */
+
+function loadBlogs(){
+
+const container=document.getElementById('blog-container')
+
+if(!container) return
+
+for(const id in blogs){
+
+const blog=blogs[id]
+
+const card=`
+
+<div class="col-lg-4 col-md-6">
+
+<div class="blog-card">
+
+<h4>${blog.title}</h4>
+
+<p class="blog-date">
+
+${blog.date}
+
+</p>
+
+<p>
+
+${blog.desc}
+
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="openBlog('${id}')">
+
+Read More
+
+</button>
+
+</div>
+
+</div>
+
+`
+
+container.innerHTML+=card
+
+}
+
+}
+
+document.addEventListener("DOMContentLoaded",loadBlogs)
+
+
+
+/* OPEN BLOG */
+
+function openBlog(blogId){
+
+const blog=blogs[blogId]
+
+if(!blog) return
+
+document.getElementById('modal-title').textContent=
+blog.title
+
+document.getElementById('modal-date').textContent=
+blog.date
+
+document.getElementById('modal-body').innerHTML=
+blog.content
+
+document.getElementById('blogModal').style.display="block"
+
+}
+
+
+
+/* CLOSE BLOG */
+
+function closeBlogModal(){
+
+document.getElementById('blogModal').style.display="none"
+
+}
+
+
+
+/* CLOSE OUTSIDE */
+
+window.addEventListener('click',function(e){
+
+let modal=document.getElementById('blogModal')
+
+if(e.target===modal){
+
+closeBlogModal()
+
+}
+
+})
+
+
+/* =========================
+   CERTIFICATE MODAL
+========================= */
+
+const certificateImages={
+
+nde:"assets/images/nde.png",
+
+sql:"assets/images/sql.png",
+
+mastercard:"assets/images/mastercard.png",
+
+freecodecamp:"assets/images/freecodecamp.png",
+
+wogleTech:"assets/images/wogleTech.png",
+
+css:"assets/images/css.png",
+
+ehe:"assets/images/ehe.png",
+
+tcs:"assets/images/tcs.png",
+
+cisco:"assets/images/cisco.png"
+
+}
+
+
+
+function openCert(certId){
+
+let modal=document.getElementById('certModal')
+
+let img=document.getElementById('modal-img')
+
+if(!certificateImages[certId]) return
+
+img.src=certificateImages[certId]
+
+modal.style.display="block"
+
+}
+
+
+
+function closeCertModal(){
+
+document.getElementById('certModal').style.display="none"
+
+}
+
+
+
+/* =========================
+   CLOSE MODALS OUTSIDE CLICK
+========================= */
+
+window.addEventListener('click',function(e){
+
+let blogModal=document.getElementById('blogModal')
+
+let certModal=document.getElementById('certModal')
+
+if(e.target===blogModal){
+
+closeBlogModal()
+
+}
+
+if(e.target===certModal){
+
+closeCertModal()
+
+}
+
+})
+
+
+
+/* =========================
+   HERO TEXT SCRAMBLE
+========================= */
+
+class TextScramble{
+
+constructor(el){
+
+this.el=el
+
+this.chars='!<>-_\\/[]{}—=+*^?#'
+
+this.update=this.update.bind(this)
+
+}
+
+setText(newText){
+
+const oldText=this.el.innerText
+
+const length=Math.max(oldText.length,newText.length)
+
+const promise=new Promise(resolve=>this.resolve=resolve)
+
+this.queue=[]
+
+for(let i=0;i<length;i++){
+
+const from=oldText[i]||''
+
+const to=newText[i]||''
+
+const start=Math.floor(Math.random()*20)
+
+const end=start+Math.floor(Math.random()*20)
+
+this.queue.push({from,to,start,end})
+
+}
+
+cancelAnimationFrame(this.frameRequest)
+
+this.frame=0
+
+this.update()
+
+return promise
+
+}
+
+update(){
+
+let output=''
+
+let complete=0
+
+for(let i=0;i<this.queue.length;i++){
+
+let {from,to,start,end,char}=this.queue[i]
+
+if(this.frame>=end){
+
+complete++
+
+output+=to
+
+}
+
+else if(this.frame>=start){
+
+if(!char||Math.random()<0.3){
+
+char=this.randomChar()
+
+this.queue[i].char=char
+
+}
+
+output+=`<span class="dud">${char}</span>`
+
+}
+
+else{
+
+output+=from
+
+}
+
+}
+
+this.el.innerHTML=output
+
+if(complete===this.queue.length){
+
+this.resolve()
+
+}
+
+else{
+
+this.frameRequest=requestAnimationFrame(this.update)
+
+this.frame++
+
+}
+
+}
+
+randomChar(){
+
+return this.chars[Math.floor(Math.random()*this.chars.length)]
+
+}
+
+}
+
+
+
+/* =========================
+   RUN HERO ANIMATION
+========================= */
+
+const hero=document.querySelector('.text')
+
+if(hero){
+
+const phrases=[
+
+"IT Support Specialist",
+
+"Cybersecurity Enthusiast",
+
+"Networking Fundamentals",
+
+"SOC Analyst Path",
+
+"Security+ Candidate"
+
 ]
 
-const el = document.querySelector('.text')
-const fx = new TextScramble(el)
+const fx=new TextScramble(hero)
 
-let counter = 0
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800)
-  })
-  counter = (counter + 1) % phrases.length
+let counter=0
+
+const next=()=>{
+
+fx.setText(phrases[counter]).then(()=>{
+
+setTimeout(next,1500)
+
+})
+
+counter=(counter+1)%phrases.length
+
 }
-// Certificate Images
-const certificateImages = {
-  cisco: 'assets/images/cisco.png',
-ehe: 'assets/images/ehe.png',
-nde: 'assets/images/nde.png',
-tcs: 'assets/images/tcs.png',
-mastercard: 'assets/images/mastercard.png',
-freecodecamp: 'assets/images/freecodecamp.png',
-css: 'assets/images/css.png',
-sql: 'assets/images/sql.png',
-wogleTech: 'assets/images/wogleTech.png'
-
-};
-
-// Open Modal Function
-function openModal(certId) {
-  const modal = document.getElementById('modal');
-  const img = document.getElementById('modal-img');
-  img.src = certificateImages[certId];
-  modal.style.display = "flex";
-}
-
-// Close Modal Function
-function closeModal() {
-  document.getElementById('modal').style.display = "none";
-}
-
-// Close modal if user clicks outside the content
-window.onclick = function (event) {
-  const modal = document.getElementById('modal');
-  if (event.target === modal) closeModal();
-};
 
 next()
 
+}

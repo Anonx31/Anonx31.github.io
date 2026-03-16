@@ -4,7 +4,7 @@
 /*GENERAL*/
 
 body {
-  background-color: #19192b;
+  background-color: #06141B;
   color: white;
 }
 
@@ -14,11 +14,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e1e1e;
+  color: #CCD0CF;
 }
 
 a {
-  color: #1e1e1e;
+  color: #CCD0CF;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -74,7 +74,7 @@ a:hover {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
-  background-color: #13111e;
+  background-color: #11212D;
   margin-bottom: 3rem;
   z-index: 2;
   color: white;
@@ -247,7 +247,7 @@ a:hover {
 }
 
 #header .logo a {
-  color:#dfa1a8;
+  color:#9BA8AB;
 }
 
 #header .logo img {
@@ -271,6 +271,7 @@ a:hover {
   display: flex;
   list-style: none;
   align-items: center;
+  
 }
 
 .navbar li {
@@ -280,6 +281,7 @@ a:hover {
 .navbar > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 30px;
+  margin-left: 15px;;
 }
 
 .navbar a,
@@ -335,7 +337,7 @@ a:hover {
 /*NAVIGATION BAR(MOBILE)*/
 
 .mobile-nav-toggle {
-  color: #c2acea;
+  color: #4a5c6a;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -379,7 +381,7 @@ a:hover {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #393852;
+  background-color: #253745;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -416,7 +418,7 @@ a:hover {
 }
 
 .hero .hero-title {
-  color: #c2acea;
+  color: #4a5c6a;
   font-weight: 600;
   font-size: 3rem;
 }
@@ -563,7 +565,7 @@ a:hover {
 
 .projects h2 {
   font-size: 2.5rem;
-  color: #c2acea; /* Accent color for headings */
+  color: #4a5c6a; /* Accent color for headings */
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -577,7 +579,7 @@ a:hover {
 
 /* Project Cards */
 .project-card {
-  background-color: #393852; /* Dark card background */
+  background-color: #253745; /* Dark card background */
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -601,7 +603,7 @@ a:hover {
 
 .project-card h4 {
   font-size: 1.5rem;
-  color: #dfa1a8; /* Accent color for project titles */
+  color: #9BA8AB; /* Accent color for project titles */
   margin-bottom: 1rem;
 }
 
@@ -658,7 +660,7 @@ a:hover {
 /* Section Headings */
 #skills h2, #tools h2, #experience h2, #certifications h2 {
   font-size: 2rem;
-  color: #c2acea;
+  color: #9BA8AB;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -687,7 +689,7 @@ a:hover {
 /* Skill, Tool, and Certification Categories */
 .skill-category, .tool-category, .certification-category {
   font-weight: bold;
-  color: #dfa1a8;
+  color: #9BA8AB;
   margin-right: 0.5rem;
 }
 
@@ -711,7 +713,7 @@ a:hover {
 
 .experience-item h4 {
   font-size: 1.5rem;
-  color: #dfa1a8;
+  color: #9BA8AB;
   margin-bottom: 0.5rem;
 }
 
@@ -741,32 +743,66 @@ a:hover {
 }
 
 /* Blog List Styles */
-.blog-list {
-  max-width: 800px;
-  margin: 0 auto;
+.blog-card{
+
+padding:20px;
+
+border-radius:10px;
+
+background: #253745;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+margin-bottom:25px;
+
+transition:.3s;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
 }
 
-.blog-item {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(186, 19, 19, 0.1);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.blog-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+
 }
 
-.blog-item h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #dfa1a8;
+.blog-date{
+
+color:#888;
+
+font-size:14px;
+
+margin-bottom:10px;
+
 }
 
-.blog-date {
-  color: #8a91aa;
-  font-size: 0.9em;
+.blog-modal-content{
+
+background:white;
+
+margin:5% auto;
+
+padding:30px;
+
+width:80%;
+
+max-width:800px;
+
+border-radius:12px;
+
+max-height:85vh;
+
+overflow-y:auto;
+
 }
 
 /* Modal Styles */
@@ -798,7 +834,7 @@ a:hover {
 }
 
 .modal-content h1,h2,h3{
-  color: #dfa1a8;
+  color: #9BA8AB;
 }
 
 .modal-content p{
@@ -885,11 +921,11 @@ a:hover {
 
 #contact h2 {
   font-size: 2.5rem;
-  color: #c2acea;
+  color: #9BA8AB;
 }
 
 #contact h4{
-  color: #c2acea;
+  color: #4a5c6a;
 }
 
 #contact p {
