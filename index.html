@@ -21,7 +21,8 @@
             <div class="flex justify-between items-center">
                 <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Bobby Dsouza</a>
                 <ul class="hidden md:flex space-x-8">
-                    <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+                    <li><a href="#about" class="hover:text-green-400 transition">About</a></li>\
+                    <li><a href="#tryhackme" class="hover:text-green-400 transition">TryHackMe</a></li>
                     <li><a href="#skills" class="hover:text-green-400 transition">Skills</a></li>
                     <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
                     <!--<li><a href="#homelab" class="hover:text-green-400 transition">Home Lab</a></li>-->
@@ -103,8 +104,95 @@
             </div>
         </div>
     </section>
+    <!-- 3. TryHackMe -->
+     
+    <section id="tryhackme" class="py-20 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+            TryHackMe
+        </h2>
+        
+        <div class="glass p-8 rounded-3xl border border-red-500/20">
+            <!-- Stats Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-red-400 mb-2">Top 60%</div>
+                    <div class="text-sm text-gray-400">Rank</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-orange-400 mb-2">2</div>
+                    <div class="text-sm text-gray-400">Badges</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-400 mb-2">3</div>
+                    <div class="text-sm text-gray-400">Day Streak</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-400 mb-2">5</div>
+                    <div class="text-sm text-gray-400">Rooms</div>
+                </div>
+            </div>
 
-    <!-- 3. SKILLS -->
+            <!-- Badges -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gray-900/60 p-4 rounded-2xl border border-gray-700">
+                    <h4 class="font-semibold mb-2">First Four Badge</h4>
+                    <p class="text-sm text-gray-400">Completed 4 rooms in first week!</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-2xl border border-gray-700">
+                    <h4 class="font-semibold mb-2">3 Day Streak</h4>
+                    <p class="text-sm text-gray-400">Consistent daily learning</p>
+                </div>
+            </div>
+
+            <!-- Scrollable Rooms List -->
+            <div class="mb-8">
+                <h4 class="text-lg font-bold mb-4 text-white flex items-center">
+                    <i class="fa-solid fa-list mr-2 text-red-400"></i>
+                    Completed Rooms
+                </h4>
+                <div class="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-900/50 pr-2">
+                    <div class="space-y-2">
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">Offensive Security Intro</span>
+                        </div>
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">Defensive Security Intro</span>
+                        </div>
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">Careers in Cyber</span>
+                        </div>
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">What is Networking</span>
+                        </div>
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">Intro to LAN</span>
+                        </div>
+                        <!-- ADD NEW ROOMS HERE - Auto-scroll works -->
+                        <!-- Example:
+                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
+                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
+                            <span class="text-sm font-medium text-white">New Room Name</span>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"
+               class="block w-full max-w-sm mx-auto px-6 py-3 bg-red-600 hover:bg-red-700 rounded-xl text-center font-semibold transition">
+                View TryHackMe Profile
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- 4. SKILLS -->
     <section id="skills" class="py-24 px-6">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
@@ -142,7 +230,7 @@
         </div>
     </section>
 
-    <!-- 4. PROJECTS -->
+    <!-- 5. PROJECTS -->
     <section id="projects" class="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
@@ -188,7 +276,7 @@
         </div>
     </section>
 
-    <!-- 5. HOME LAB 
+    <!-- 6. HOME LAB 
     <section id="homelab" class="py-24 px-6">
         <div class="container mx-auto max-w-4xl text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -219,7 +307,7 @@
         </div>
     </section>
 -->
-    <!-- 6. CERTIFICATIONS -->
+    <!-- 7. CERTIFICATIONS -->
     
 <section id="certs" class="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
     <div class="container mx-auto max-w-5xl">
@@ -230,37 +318,40 @@
             
             <!-- Ethical Hacking Essentials -->
             <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-purple-500/30 group">
-                <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
-                    <i class="fas fa-hacking text-3xl text-purple-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Ethical Hacking Essentials</h3>
-                <p class="opacity-80 mb-4 text-sm">EC-Council • 2023</p>
-                <p class="text-xs bg-purple-500/20 text-purple-200 p-2 rounded-lg mb-6 font-mono">Credential: 195691</p>
-                
-                <div class="space-y-2 mb-6 opacity-90">
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Penetration testing fundamentals
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Vulnerability assessment techniques
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Reconnaissance & scanning methods
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                    <button onclick="copyCredential('195691')" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-xs rounded-lg font-mono transition">
-                        <i class="fas fa-copy mr-1"></i>Copy ID
-                    </button>
-                    <a href="https://aspen.eccouncil.org/verify" target="_blank" class="px-4 py-2 border-2 border-purple-500 hover:bg-purple-500 text-xs rounded-lg transition">
-                        <i class="fas fa-external-link-alt mr-1"></i>Verify
-                    </a>
-                </div>
-            </div>
+    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
+        <i class="fa-solid fa-shield-halved text-3xl text-purple-400"></i>
+    </div>
+
+    <h3 class="text-xl font-bold mb-4 text-white">Ethical Hacking Essentials</h3>
+    <p class="opacity-80 mb-4 text-sm">EC-Council • 2023</p>
+    <p class="text-xs bg-purple-500/20 text-purple-200 p-2 rounded-lg mb-6 font-mono">
+        Credential: 195691
+    </p>
+
+    <div class="space-y-2 mb-6 opacity-90">
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Penetration testing fundamentals
+        </div>
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Vulnerability assessment techniques
+        </div>
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Reconnaissance & scanning methods
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+        <button onclick="copyCredential('195691')" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-xs rounded-lg font-mono transition">
+            <i class="fa-solid fa-copy mr-1"></i>Copy ID
+        </button>
+        <a href="https://aspen.eccouncil.org/verify" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border-2 border-purple-500 hover:bg-purple-500 text-xs rounded-lg transition">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Verify
+        </a>
+    </div>
+</div>
 
             <!-- Network Defense Essentials -->
             <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-green-500/30 group">
@@ -363,6 +454,43 @@
                     </a>
                 </div>
             </div>
+            <!--ANZ Forage-->
+            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-indigo-500/30 group">
+    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-indigo-900 to-blue-900 flex items-center justify-center">
+        <i class="fa-solid fa-shield-halved text-3xl text-indigo-400"></i>
+    </div>
+
+    <h3 class="text-xl font-bold mb-4 text-white">Cybersecurity Management Job Simulation</h3>
+    <p class="opacity-80 mb-4 text-sm">Forage • Virtual Experience</p>
+    <p class="text-xs bg-indigo-500/20 text-indigo-200 p-2 rounded-lg mb-6 font-mono">
+        Credential: fu9dhGjxbG7Co2aex
+    </p>
+
+    <div class="space-y-2 mb-6 opacity-90">
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Risk assessment and decision-making
+        </div>
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Incident response planning
+        </div>
+        <div class="flex items-center justify-center text-xs">
+            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
+            Cybersecurity communication and reporting
+        </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+        <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-xs rounded-lg font-mono transition">
+            <i class="fa-solid fa-copy mr-1"></i>Copy ID
+        </button>
+        <a href="https://www.theforage.com/simulations" target="_blank" rel="noopener noreferrer"
+           class="px-4 py-2 border-2 border-indigo-500 hover:bg-indigo-500 text-xs rounded-lg transition">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>View Program
+        </a>
+    </div>
+</div>
 
         </div>
     </div>
@@ -371,7 +499,7 @@
 
 
 
-    <!-- 7. CONTACT -->
+    <!-- 8. CONTACT -->
     <section id="contact" class="py-24 px-6 bg-gray-900 border-t-4 border-green-500">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
