@@ -1,677 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bobby Dsouza | SOC Analyst Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'JetBrains Mono', monospace; }
-        .matrix-bg { background: linear-gradient(45deg, #0f0f23 0%, #1a0033 50%, #0f0f23 100%); }
-        .scroll-smooth { scroll-behavior: smooth; }
-        .glass { backdrop-filter: blur(10px); background: rgba(15,15,35,0.8); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobby Dsouza | Cybersecurity Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-900 text-white scroll-smooth">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass backdrop-blur-md border-b border-green-500/30">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Bobby Dsouza</a>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
-                    <li><a href="#tryhackme" class="hover:text-green-400 transition">THM</a></li>
-                    <li><a href="#hackthebox" class="hover:text-green-400 transition">HTB</a></li>
-                    <li><a href="#skills" class="hover:text-green-400 transition">Skills</a></li>
-                    <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
-                    <li><a href="#certs" class="hover:text-green-400 transition">Certs</a></li>
-                    <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
-                </ul>
-                <button class="md:hidden">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 1. HERO -->
-    <section id="hero" class="min-h-screen matrix-bg flex items-center justify-center text-center px-6 pt-20">
-        <div class="max-w-4xl mx-auto">
-            <img src="assets/img/ME.jpg" alt="Bobby Dsouza" class="w-32 h-32 mx-auto rounded-full ring-4 ring-green-400/30 mb-8">
-            <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-                Bobby Dsouza
-            </h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Aspiring <span class="text-green-400 font-bold">SOC Analyst</span> | B.Sc IT (2024-25, Mumbai University, CGPA 8.02)<br>
-                Threat Detection • Incident Response • Network Security
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <a href="#projects" class="px-10 py-4 bg-green-600 hover:bg-green-700 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
-                    <i class="fas fa-code mr-2"></i>View Projects
-                </a>
-                <a href="#contact" class="px-10 py-4 border-2 border-green-500 hover:bg-green-500 rounded-full text-lg font-semibold transition-all">
-                    <i class="fas fa-envelope mr-2"></i>Get In Touch
-                </a>
-            </div>
-            <!-- Social Links -->
-            <div class="flex justify-center space-x-6">
-                <a href="https://github.com/anonx31" class="text-2xl hover:text-green-400 transition"><i class="fab fa-github"></i></a>
-                <a href="www.linkedin.com/in/anon3102" class="text-2xl hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://tryhackme.com/p/Anonx31" class="text-2xl hover:text-green-400 transition"><i class="fas fa-shield-alt"></i></a>
-                <a href="https://profile.hackthebox.com/profile/019d0fdd-fc48-724e-ac9e-55b8ff2313f2" class="text-2xl hover:text-orange-400 transition"><i class="fas fa-hammer"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. ABOUT -->
-    <section id="about" class="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                About Me
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg leading-relaxed mb-8 opacity-90">
-                        Hands-on cybersecurity enthusiast with experience from <strong>TryHackMe</strong>, <strong>HackTheBox</strong>, and personal security labs. 
-                        Passionate about transitioning into SOC Analyst roles to protect networks and analyze threats in real-time.
-                    </p>
-                    <p class="text-lg leading-relaxed opacity-90">
-                        Built security tools in Python & Bash, practiced incident response through Forage programs, and maintain an active home lab for vulnerability testing.
-                    </p>
-                    <div class="mt-12 grid grid-cols-2 gap-6">
-                        <div class="text-center p-6 glass rounded-xl">
-                            <div class="text-3xl font-bold text-green-400 mb-2">8.02</div>
-                            <div>CGPA</div>
-                        </div>
-                        <div class="text-center p-6 glass rounded-xl">
-                            <div class="text-3xl font-bold text-blue-400 mb-2">2+</div>
-                            <div>EC-Council Certs</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="glass p-8 rounded-2xl border border-green-500/20">
-                        <h3 class="text-2xl font-bold mb-6">Tech Stack</h3>
-                        <div class="grid grid-cols-3 gap-4 text-center">
-                            <div><i class="fas fa-shield-alt text-2xl text-green-400 mb-2 block"></i>Python</div>
-                            <div><i class="fab fa-linux text-2xl text-orange-400 mb-2 block"></i>Bash</div>
-                            <div><i class="fas fa-network-wired text-2xl text-blue-400 mb-2 block"></i>Nmap</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   <!-- 3. TryHackMe -->
-<section id="tryhackme" class="py-20 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
-    <div class="container mx-auto max-w-4xl">
-        <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-            TryHackMe
-        </h2>
-        
-        <div class="glass p-8 rounded-3xl border border-red-500/20">
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-yellow-400 mb-2">1085</div>
-                    <div class="text-sm text-gray-400">Points</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-red-400 mb-2">Top 35%</div>
-                    <div class="text-sm text-gray-400">Rank</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-orange-400 mb-2">4</div>
-                    <div class="text-sm text-gray-400">Badges</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-green-400 mb-2">6</div>
-                    <div class="text-sm text-gray-400">Day Streak</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold text-blue-400 mb-2">11</div>
-                    <div class="text-sm text-gray-400">Rooms</div>
-                </div>
-            </div>
-
-            <!-- Badges -->
-            <div class="grid md:grid-cols-2 gap-6 mb-8">
-                <div class="bg-gray-900/60 p-4 rounded-2xl border border-gray-700">
-                    <h4 class="font-semibold mb-2">Webbed</h4>
-                    <p class="text-sm text-gray-400">Recent Badge</p>
-                </div>
-                <div class="bg-gray-900/60 p-4 rounded-2xl border border-gray-700">
-                    <h4 class="font-semibold mb-2">Consistent daily learning</h4>
-                    <p class="text-sm text-gray-400">6 Day Streak</p>
-                </div>
-            </div>
-
-            <!-- Scrollable Rooms List -->
-            <div class="mb-8">
-                <h4 class="text-lg font-bold mb-4 text-white flex items-center">
-                    <i class="fa-solid fa-list mr-2 text-red-400"></i>
-                    Completed Rooms
-                </h4>
-                <div class="max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-900/50 pr-2">
-                    <div class="space-y-2">
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">1.Offensive Security Intro</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">2.Defensive Security Intro</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">3.Careers in Cyber</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">4.What is Networking</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">5.Intro to LAN</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">6.OSI Model</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">7.Packets & Frames</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">8.Extending Your Network</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">9.DNS in Detail</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">10.HTTP in Detail</span>
-                        </div>
-                        <div class="flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700 hover:bg-gray-800/60 transition-all">
-                            <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-                            <span class="text-sm font-medium text-white">11.How Websites Work</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Button -->
-            <a href="https://tryhackme.com" target="_blank" rel="noopener noreferrer"
-               class="block w-full max-w-sm mx-auto px-6 py-3 bg-red-600 hover:bg-red-700 rounded-xl text-center font-semibold transition">
-                View TryHackMe Profile
-            </a>
-        </div>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo">BD</div>
+        <div><div>Bobby Dsouza</div><div class="sub">Cybersecurity Enthusiast</div></div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#stats">THM/HTB</a><a href="#certs">Certificates</a><a href="#contact">Contact</a>
+      </nav>
     </div>
-</section>
- <!-- 4.HackTheBox-->
-<section id="hackthebox" class="py-20 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
-  <div class="container mx-auto max-w-5xl">
-    <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-      Hack The Box
-    </h2>
+  </header>
 
-    <div class="glass p-8 rounded-3xl border border-red-500/20">
-
-      <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-        <div class="text-center">
-          <div class="text-3xl font-bold text-green-400 mb-2">1</div>
-          <div class="text-sm text-gray-400">Day Streak</div>
+  <main>
+    <section class="hero panel reveal hero-split">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal-left">
+          <div class="eyebrow"><span class="dot"></span> TERMINAL ACCESS GRANTED •</div>
+          <h1><span class="gradient">Bobby Dsouza</span><br/>Cybersecurity Enthusiast</h1>
+          <p class="lead">Entry-level Cybersecurity enthusiast focused on SOC operations, threat analysis, and incident response. Experienced in hands-on labs from TryHackMe, HTB, and cybersecurity job simulations (TATA, ANZ, Mastercard), with a strong foundation in networking, Linux, and Python. Proven ability to learn quickly, adapt, and apply security concepts in real scenarios. Passionate about defending systems, continuously upskilling, and ready to contribute to any team with dedication and flexibility.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:bobbydsouza3102@gmail.com">Get In Touch</a>
+            <a class="btn btn-secondary" href="https://github.com/anonx31" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/anon3102" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
         </div>
+        <aside class="terminal-aside reveal-right">
+          <div class="terminal">
+            <div class="terminal-header"><span>cyber-lab@anonx31</span><span class="close-btn">×</span></div>
+            <div class="terminal-body">
+              <div class="cmd-line"><span class="prompt">$</span> whoami</div>
+              <div class="output">anonx31 - cybersecurity enthusiast</div>
+              <div class="cmd-line"><span class="prompt">$</span> cat /etc/motd</div>
+              <div class="output">Welcome to Portfolio<br>Active on THM & HTB<br>Building a secure cyber space</div>
+              <div class="cmd-line cursor"><span class="prompt">$</span> <span class="blink">_</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-        <div class="text-center">
-          <div class="text-3xl font-bold text-yellow-400 mb-2">32</div>
-          <div class="text-sm text-gray-400">Cubes</div>
-        </div>
-
-        <div class="text-center">
-          <div class="text-3xl font-bold text-blue-400 mb-2">1</div>
-          <div class="text-sm text-gray-400">Modules Completed</div>
-        </div>
-
-        <div class="text-center">
-          <div class="text-3xl font-bold text-purple-400 mb-2">0</div>
-          <div class="text-sm text-gray-400">Labs Completed</div>
+    <section id="about" class="panel reveal-section">
+      <div class="container">
+        <div class="section-title"><h2>About Me</h2><p>Driven cybersecurity fresher with hands-on SOC training.</p></div>
+        <div class="about-grid">
+          <div class="card reveal-card glass-card"><div class="label">Bio</div><p class="muted">I am Bobby Dsouza, a cybersecurity enthusiast and aspiring security professional with a strong interest in ethical hacking, networking, system security, and practical lab work. I enjoy learning by building, testing, and improving real projects.</p><p class="muted">I also like creating websites that look modern, load fast, and clearly present skills, certificates, and projects.</p></div>
+          <div class="card reveal-card glass-card"><div class="label">Education</div><!--<p class="muted">Add your degree, university, CGPA, and graduation year here from your resume.</p>--><div class="chip-wrap"><span class="chip">Degree: BSc IT</span><span class="chip">CGPA: 8.02</span><span class="chip">University: University of Mumbai</span><span class="chip">Year: 2025</span></div></div>
         </div>
       </div>
+    </section>
 
-      <!-- Progress -->
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <div>
-          <div class="flex justify-between mb-2">
-            <span class="text-sm text-gray-300">Offensive</span>
-            <span class="text-sm text-gray-400">0%</span>
-          </div>
-          <div class="w-full bg-gray-800 rounded-full h-3">
-            <div class="bg-red-500 h-3 rounded-full" style="width:0%"></div>
-          </div>
+    <section id="skills" class="panel reveal-section">
+      <div class="container">
+        <div class="section-title"><h2>Skills</h2><p>Core technical areas refined through labs, projects, and web development.</p></div>
+        <div class="skill-grid">
+          <div class="card reveal-card skill-card"><h3>Cybersecurity</h3><p class="muted">SOC Fundamentals, Threat Detection & Basic Incident Response, ulnerability Assessment, Ethical Hacking & Penetration Testing Basics, Network Security Fundamentals, Hands-on Labs: TryHackMe, Hack The Box, Cybersecurity Job Simulations.</p></div>
+          <div class="card reveal-card skill-card"><h3>Networking</h3><p class="muted">Networking Fundamentals, IP Addressing, Subnetting, DNS, DHCP, HTTP/HTTPS, Routing & Switching Concepts, Basic Network Trhoubleshooting, Wireshark</p></div>
+          <div class="card reveal-card skill-card"><h3>Web Dev</h3><p class="muted">HTML, CSS, JavaScript, Building Portfolio Websites, Basic Understanding of Web Security, Shopify</p></div>
+          <div class="card reveal-card skill-card"><h3>Tools & Platforms</h3><p class="muted">Kali Linux, Wireshark, Nmap, Burp Suite, Metasploit, Splunk, TryHackMe & Hack The Box, Git & GitHub.</p></div>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <div class="flex justify-between mb-2">
-            <span class="text-sm text-gray-300">Defensive</span>
-            <span class="text-sm text-gray-400">0%</span>
+    <section id="stats" class="panel reveal-section">
+      <div class="container">
+        <div class="section-title"><h2>TryHackMe & HackTheBox</h2><p>Solved rooms and modules are shown here in list.</p></div>
+        <div class="about-grid">
+          <div class="card reveal-card stats-card">
+            <h3>TryHackMe • Anonx31</h3>
+            <div class="stat-item"><span class="stat-label">Rank</span><span class="stat-value">Top 30%</span></div>
+            <div class="stat-item"><span class="stat-label">Badges</span><span class="stat-value">7</span></div>
+            <div class="stat-item"><span class="stat-label">Streak</span><span class="stat-value">10 days</span></div>
+            <div class="stat-item"><span class="stat-label">Completed Rooms</span><span class="stat-value">19</span></div>
+            <div class="rooms-container"><h4>Solved Rooms</h4><div class="rooms-list"><div class="room-item">Offensive Security Intro</div><div class="room-item">Defensive Security Intro</div><div class="room-item">Careers in Cyber</div><div class="room-item">What is Networking?</div><div class="room-item">Intro to LAN</div><div class="room-item">OSI Model</div><div class="room-item">Packets & Frames</div><div class="room-item">Extending Your Network</div><div class="room-item">DNS in Details</div><div class="room-item">HTTP in Details</div><div class="room-item">How Websites Work</div><div class="room-item">Putting it all together</div><div class="room-item">Inside a Computer System</div><div class="room-item">Computer Types</div><div class="room-item">Client-Server Basics</div><div class="room-item">Virtualisation Basics</div><div class="room-item">Cloud Computing Fundamentals</div><div class="room-item">Operating Systems: Introduction</div><div class="room-item">Windows Basics</div></div></div>
           </div>
-          <div class="w-full bg-gray-800 rounded-full h-3">
-            <div class="bg-blue-500 h-3 rounded-full" style="width:0%"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between mb-2">
-            <span class="text-sm text-gray-300">Purple</span>
-            <span class="text-sm text-gray-400">0%</span>
-          </div>
-          <div class="w-full bg-gray-800 rounded-full h-3">
-            <div class="bg-purple-500 h-3 rounded-full" style="width:0%"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex justify-between mb-2">
-            <span class="text-sm text-gray-300">General</span>
-            <span class="text-sm text-gray-400">8%</span>
-          </div>
-          <div class="w-full bg-gray-800 rounded-full h-3">
-            <div class="bg-yellow-500 h-3 rounded-full" style="width:7.8%"></div>
+          <div class="card reveal-card stats-card">
+            <h3>HackTheBox • Anonx31</h3>
+            <div class="stat-item"><span class="stat-label">Cubes</span><span class="stat-value">22</span></div>
+            <div class="stat-item"><span class="stat-label">Modules</span><span class="stat-value">1</span></div>
+            <div class="stat-item"><span class="stat-label">Labs</span><span class="stat-value">0</span></div>
+            <div class="stat-item"><span class="stat-label">Weekly Streak</span><span class="stat-value">2</span></div>
+            <div class="rooms-container"><h4>Solved Modules</h4><div class="rooms-list"><div class="room-item">Intro to Academy</div></div></div>
+            <div class="rooms-container"><h4>Solved Labs</h4><div class="rooms-list"><div class="room-item">No labs added yet</div></div></div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Selector -->
-      <div class="mb-6">
-        <select id="contentType" class="w-full p-3 rounded-xl bg-gray-900 border border-gray-700 text-white outline-none">
-          <option value="module">Solved Modules</option>
-          <option value="lab">Solved Labs</option>
-        </select>
-      </div>
+    <section id="projects" class="panel reveal-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>Practical cybersecurity tools and scripts built for learning and real-world application.</p>
+    </div>
 
-      <!-- Scrollable List -->
-      <div class="mb-8">
-        <h4 class="text-lg font-bold mb-4 text-white flex items-center">
-          <i class="fa-solid fa-list mr-2 text-red-400"></i>
-          <span id="listTitle">Solved Modules</span>
-        </h4>
+    <div class="project-grid">
 
-        <div class="max-h-56 overflow-y-auto scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-900/50 pr-2">
-          <div id="contentList" class="space-y-2"></div>
+      <!-- Project 1 -->
+      <article class="card reveal-card project">
+        <div class="top">CRYPTOGRAPHY TOOL</div>
+        <h3>Caesar Encryption Tool</h3>
+        <p class="muted">
+          Developed a simple encryption and decryption tool using the Caesar cipher technique to understand basic cryptography concepts and data security.
+        </p>
+        <div class="meta">
+          <span>Python</span>
+          <span>Encryption</span>
+          <span>CLI Tool</span>
         </div>
-      </div>
+        <div class="chip-wrap">
+          <a class="chip" href="https://github.com/Anonx31/Caesar-Cipher-Encryptor" target="_blank">View Code</a>
+        </div>
+      </article>
 
-      <a href="https://www.hackthebox.com/" target="_blank" rel="noopener noreferrer"
-         class="block w-full max-w-sm mx-auto px-6 py-3 bg-red-600 hover:bg-red-700 rounded-xl text-center font-semibold transition">
-        View Hack The Box Profile
-      </a>
+      <!-- Project 2 -->
+      <article class="card reveal-card project">
+        <div class="top">SECURITY TOOL</div>
+        <h3>Password Strength Checker</h3>
+        <p class="muted">
+          Built a tool to analyze password strength based on complexity rules such as length, characters, and patterns to promote secure password practices.
+        </p>
+        <div class="meta">
+          <span>Python</span>
+          <span>Security</span>
+          <span>Validation</span>
+        </div>
+        <div class="chip-wrap">
+          <a class="chip" href="https://github.com/Anonx31/Password-Strength-Checker" target="_blank">View Code</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card reveal-card project">
+        <div class="top">SYSTEM HARDENING</div>
+        <h3>Linux Hardening Toolkit</h3>
+        <p class="muted">
+          Created a toolkit with scripts to improve Linux system security by applying basic hardening techniques such as disabling unnecessary services and enforcing configurations.
+        </p>
+        <div class="meta">
+          <span>Linux</span>
+          <span>Bash</span>
+          <span>Hardening</span>
+          <span>Automation</span>
+        </div>
+        <div class="chip-wrap">
+          <a class="chip" href="https://github.com/Anonx31/Linux-Hardening-Toolkit" target="_blank">View Code</a>
+        </div>
+      </article>
+
     </div>
   </div>
-</section>   
-<!-- 5. SKILLS -->
-    <section id="skills" class="py-24 px-6">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                Skills
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl border border-green-500/20">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i class="fas fa-shield-alt text-green-400 mr-3"></i>Security</h3>
-                    <ul class="space-y-3">
-                        <li><i class="fas fa-circle text-green-400 mr-3"></i>SIEM Basics</li>
-                        <li><i class="fas fa-circle text-green-400 mr-3"></i>Incident Response</li>
-                        <li><i class="fas fa-circle text-green-400 mr-3"></i>Threat Detection</li>
-                        <li><i class="fas fa-circle text-green-400 mr-3"></i>Log Analysis</li>
-                    </ul>
-                </div>
-                <div class="glass p-8 rounded-2xl border border-blue-500/20">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i class="fas fa-network-wired text-blue-400 mr-3"></i>Networking</h3>
-                    <ul class="space-y-3">
-                        <li><i class="fas fa-circle text-blue-400 mr-3"></i>TCP/IP • DNS</li>
-                        <li><i class="fas fa-circle text-blue-400 mr-3"></i>OSI Model</li>
-                        <li><i class="fas fa-circle text-blue-400 mr-3"></i>Subnetting</li>
-                        <li><i class="fas fa-circle text-blue-400 mr-3"></i>VPN Concepts</li>
-                    </ul>
-                </div>
-                <div class="glass p-8 rounded-2xl border border-purple-500/20">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center"><i class="fas fa-terminal text-purple-400 mr-3"></i>Systems</h3>
-                    <ul class="space-y-3">
-                        <li><i class="fas fa-circle text-purple-400 mr-3"></i>Linux Commands</li>
-                        <li><i class="fas fa-circle text-purple-400 mr-3"></i>Windows Admin</li>
-                        <li><i class="fas fa-circle text-purple-400 mr-3"></i>Active Directory</li>
-                        <li><i class="fas fa-circle text-purple-400 mr-3"></i>Troubleshooting</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. PROJECTS -->
-    <section id="projects" class="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                Projects
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl hover:scale-105 transition-all group border border-green-500/20">
-                    <div class="w-full h-40 bg-gradient-to-br from-green-900 to-blue-900 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition">
-                        <i class="fas fa-key text-5xl text-green-400 opacity-70"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Caesar Cipher Encryptor</h3>
-                    <p class="opacity-80 mb-6">Python GUI encryption tool with input validation and cipher logic.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/Anonx31/Caesar-Cipher-Encryptor" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg text-sm">GitHub</a>
-                        <span class="px-4 py-2 bg-gray-800 rounded-lg text-sm">Python</span>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl hover:scale-105 transition-all group border border-blue-500/20">
-                    <div class="w-full h-40 bg-gradient-to-br from-blue-900 to-purple-900 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition">
-                        <i class="fas fa-lock text-5xl text-blue-400 opacity-70"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Password Strength Checker</h3>
-                    <p class="opacity-80 mb-6">Password analysis script categorizing strength levels.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/Anonx31/Password-Strength-Checker" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm">GitHub</a>
-                        <span class="px-4 py-2 bg-gray-800 rounded-lg text-sm">Python</span>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl hover:scale-105 transition-all group border border-orange-500/20">
-                    <div class="w-full h-40 bg-gradient-to-br from-orange-900 to-red-900 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition">
-                        <i class="fab fa-linux text-5xl text-orange-400 opacity-70"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Linux Hardening Toolkit</h3>
-                    <p class="opacity-80 mb-6">Bash scripts for automated Linux security configurations.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/Anonx31/Linux-Hardening-Toolkit" class="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-lg text-sm">GitHub</a>
-                        <span class="px-4 py-2 bg-gray-800 rounded-lg text-sm">Bash</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-
-    <!-- 7. CERTIFICATIONS -->
-    
-<section id="certs" class="py-24 px-6 bg-gradient-to-b from-gray-900/50 to-gray-800/50">
-    <div class="container mx-auto max-w-5xl">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Certifications
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Ethical Hacking Essentials -->
-            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-purple-500/30 group">
-    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-900 to-pink-900 flex items-center justify-center">
-        <i class="fa-solid fa-shield-halved text-3xl text-purple-400"></i>
-    </div>
-
-    <h3 class="text-xl font-bold mb-4 text-white">Ethical Hacking Essentials</h3>
-    <p class="opacity-80 mb-4 text-sm">EC-Council • 2023</p>
-    <p class="text-xs bg-purple-500/20 text-purple-200 p-2 rounded-lg mb-6 font-mono">
-        Credential: 195691
-    </p>
-
-    <div class="space-y-2 mb-6 opacity-90">
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Penetration testing fundamentals
-        </div>
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Vulnerability assessment techniques
-        </div>
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Reconnaissance & scanning methods
-        </div>
-    </div>
-
-    <div class="flex flex-col sm:flex-row gap-2 justify-center">
-        <button onclick="copyCredential('195691')" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-xs rounded-lg font-mono transition">
-            <i class="fa-solid fa-copy mr-1"></i>Copy ID
-        </button>
-        <a href="https://aspen.eccouncil.org/verify" target="_blank" rel="noopener noreferrer" class="px-4 py-2 border-2 border-purple-500 hover:bg-purple-500 text-xs rounded-lg transition">
-            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>Verify
-        </a>
-    </div>
-</div>
-
-            <!-- Network Defense Essentials -->
-            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-green-500/30 group">
-                <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-900 to-emerald-900 flex items-center justify-center">
-                    <i class="fas fa-shield-alt text-3xl text-green-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Network Defense Essentials</h3>
-                <p class="opacity-80 mb-4 text-sm">EC-Council • 2023</p>
-                <p class="text-xs bg-green-500/20 text-green-200 p-2 rounded-lg mb-6 font-mono">Credential: 195681</p>
-                
-                <div class="space-y-2 mb-6 opacity-90">
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Network security fundamentals
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Threat detection & mitigation
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
-                        Incident response procedures
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                    <button onclick="copyCredential('195681')" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-xs rounded-lg font-mono transition">
-                        <i class="fas fa-copy mr-1"></i>Copy ID
-                    </button>
-                    <a href="https://aspen.eccouncil.org/verify" target="_blank" class="px-4 py-2 border-2 border-green-500 hover:bg-green-500 text-xs rounded-lg transition">
-                        <i class="fas fa-external-link-alt mr-1"></i>Verify
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tata Forage -->
-            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-orange-500/30 group">
-                <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-orange-900 to-red-900 flex items-center justify-center">
-                    <i class="fas fa-briefcase text-3xl text-orange-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Tata Cybersecurity Analyst</h3>
-                <p class="opacity-80 mb-4 text-sm">Job Simulation • Forage • Jan 2025</p>
-                <p class="text-xs bg-orange-500/20 text-orange-200 p-2 rounded-lg mb-6 font-mono">ID: ME6EaQFNExwgbGYNY</p>
-                
-                <div class="space-y-2 mb-6 opacity-90">
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-orange-400 mr-2"></i>
-                        Cyber incident investigation
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-orange-400 mr-2"></i>
-                        Suspicious network analysis
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-orange-400 mr-2"></i>
-                        Risk assessment workflows
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                    <button onclick="copyCredential('ME6EaQFNExwgbGYNY')" class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-xs rounded-lg font-mono transition">
-                        <i class="fas fa-copy mr-1"></i>Copy ID
-                    </button>
-                    <a href="https://www.theforage.com/simulations/tata/cybersecurity-sbda" target="_blank" class="px-4 py-2 border-2 border-orange-500 hover:bg-orange-500 text-xs rounded-lg transition">
-                        <i class="fas fa-external-link-alt mr-1"></i>View Program
-                    </a>
-                </div>
-            </div>
-
-            <!-- Mastercard Forage -->
-            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-blue-500/30 group md:col-span-2 lg:col-span-1">
-                <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-900 to-indigo-900 flex items-center justify-center">
-                    <i class="fab fa-cc-mastercard text-3xl text-yellow-400"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-4 text-white">Mastercard Cybersecurity</h3>
-                <p class="opacity-80 mb-4 text-sm">Job Simulation • Forage • Jan 2025</p>
-                <p class="text-xs bg-blue-500/20 text-blue-200 p-2 rounded-lg mb-6 font-mono">ID: 9DX8pNXCvALmdrFt6</p>
-                
-                <div class="space-y-2 mb-6 opacity-90">
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                        Phishing email analysis
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                        Attack indicator identification
-                    </div>
-                    <div class="flex items-center justify-center text-xs">
-                        <i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                        Security awareness training
-                    </div>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                    <button onclick="copyCredential('9DX8pNXCvALmdrFt6')" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-xs rounded-lg font-mono transition">
-                        <i class="fas fa-copy mr-1"></i>Copy ID
-                    </button>
-                    <a href="https://www.theforage.com/simulations/mastercard/cybersecurity-t8ye" target="_blank" class="px-4 py-2 border-2 border-blue-500 hover:bg-blue-500 text-xs rounded-lg transition">
-                        <i class="fas fa-external-link-alt mr-1"></i>View Program
-                    </a>
-                </div>
-            </div>
-            <!--ANZ Forage-->
-            <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition-all border border-indigo-500/30 group">
-    <div class="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-indigo-900 to-blue-900 flex items-center justify-center">
-        <i class="fa-solid fa-shield-halved text-3xl text-indigo-400"></i>
-    </div>
-
-    <h3 class="text-xl font-bold mb-4 text-white">Cybersecurity Management Job Simulation</h3>
-    <p class="opacity-80 mb-4 text-sm">Forage • Virtual Experience</p>
-    <p class="text-xs bg-indigo-500/20 text-indigo-200 p-2 rounded-lg mb-6 font-mono">
-        Credential: fu9dhGjxbG7Co2aex
-    </p>
-
-    <div class="space-y-2 mb-6 opacity-90">
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Risk assessment and decision-making
-        </div>
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Incident response planning
-        </div>
-        <div class="flex items-center justify-center text-xs">
-            <i class="fa-solid fa-circle-check text-green-400 mr-2"></i>
-            Cybersecurity communication and reporting
-        </div>
-    </div>
-
-    <div class="flex flex-col sm:flex-row gap-2 justify-center">
-        <button class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-xs rounded-lg font-mono transition">
-            <i class="fa-solid fa-copy mr-1"></i>Copy ID
-        </button>
-        <a href="https://www.theforage.com/simulations" target="_blank" rel="noopener noreferrer"
-           class="px-4 py-2 border-2 border-indigo-500 hover:bg-indigo-500 text-xs rounded-lg transition">
-            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>View Program
-        </a>
-    </div>
-</div>
-
-        </div>
-    </div>
 </section>
 
-
-
-
-    <!-- 8. CONTACT -->
-    <section id="contact" class="py-24 px-6 bg-gray-900 border-t-4 border-green-500">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-                Let's Connect
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-8">Get In Touch</h3>
-                    <div class="space-y-6 mb-12">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-green-400 text-xl mr-4"></i>
-                            <span>bobbydsouza3102@gmail.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-green-400 text-xl mr-4"></i>
-                            <span>+91 8788813453</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-green-400 text-xl mr-4"></i>
-                            <span>Ulhasnagar, Maharashtra</span>
-                        </div>
-                    </div>
-                    <div class="flex space-x-4">
-                        <a href="https://github.com/anonx31" class="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-xl flex items-center justify-center transition">
-                            <i class="fab fa-github"></i>
-                        </a>
-<script>
-function copyCredential(credentialId) {
-    navigator.clipboard.writeText(credentialId).then(function() {
-        // Show copy success
-        const button = event.target.closest('button');
-        const originalText = button.innerHTML;
-        button.innerHTML = '<i class="fas fa-check mr-1"></i>Copied!';
-        button.classList.add('bg-green-600');
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.classList.remove('bg-green-600');
-        }, 2000);
-    });
-}
-</script>
-<script>
-  const htbData = {
-    module: [
-      "Module 1"
-    ],
-    lab: []
-  };
-
-  const contentType = document.getElementById("contentType");
-  const contentList = document.getElementById("contentList");
-  const listTitle = document.getElementById("listTitle");
-
-  function renderList() {
-    const type = contentType.value;
-    listTitle.textContent = type === "module" ? "Solved Modules" : "Solved Labs";
-    contentList.innerHTML = "";
-
-    if (htbData[type].length === 0) {
-      contentList.innerHTML = `
-        <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-700 text-sm text-gray-400">
-          No solved ${type === "module" ? "modules" : "labs"} yet.
-        </div>
-      `;
-      return;
-    }
-
-    htbData[type].forEach((item, index) => {
-      const row = document.createElement("div");
-      row.className = "flex items-center p-3 rounded-xl bg-gray-900/60 border border-gray-700";
-      row.innerHTML = `
-        <i class="fa-solid fa-check-circle text-green-400 mr-3 text-sm"></i>
-        <span class="text-sm font-medium text-white">${index + 1}. ${item}</span>
-      `;
-      contentList.appendChild(row);
-    });
-  }
-
-  contentType.addEventListener("change", renderList);
-  renderList();
-</script>
+  <footer class="footer">© 2026 Bobby Dsouza. Built for a cybersecurity-focused personal portfolio.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
