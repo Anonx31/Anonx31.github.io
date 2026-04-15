@@ -1,773 +1,374 @@
-<div class="hero-akayda">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKAYDA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-.hero-akayda{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-  background:#0a0a0f;
-  font-family:'Inter',sans-serif;
-}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
 
-/* BACKGROUND AKAYDA */
-.hero-bg{
-  position:absolute;
-  font-size:clamp(10rem,22vw,22rem);
-  font-weight:800;
-  letter-spacing:12px;
-  color:rgba(255, 255, 255, 0.50);
-  z-index:0;
-
-  transform:scale(0.6);
-  opacity:0;
-
-  animation:
-    popReveal 1.4s cubic-bezier(.22,1,.36,1) forwards,
-    breathe 6s ease-in-out infinite 1.4s;
-}
-
-/* POP → SETTLE */
-@keyframes popReveal{
-  0%{
-    opacity:0;
-    transform:scale(0.5);
-    letter-spacing:40px;
-    filter:blur(8px);
-  }
-  50%{
-    opacity:0.18;
-    transform:scale(1.15);
-    letter-spacing:10px;
-    filter:blur(0);
-  }
-  100%{
-    opacity:0.08;
-    transform:scale(1);
-    letter-spacing:12px;
-  }
-}
-
-/* SUBTLE LOOP */
-@keyframes breathe{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.03)}
-}
-
-/* CONTENT */
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-
-/* TITLE */
-.hero-title{
-  font-size:clamp(3.5rem,6vw,5.5rem);
-  font-weight:800;
-  letter-spacing:2px;
-  color:#b8a7a7;
-
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 0.8s ease forwards;
-  animation-delay:0.6s;
-}
-
-/* SUBTITLE */
-.hero-sub{
-  margin-top:14px;
-  font-size:clamp(1rem,1.8vw,1.4rem);
-  color:#a1a1aa;
-  font-weight:300;
-
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 0.8s ease forwards;
-  animation-delay:0.9s;
-}
-
-/* CTA */
-.hero-cta{
-  margin-top:30px;
-}
-
-.hero-btn{
-  padding:16px 40px;
-  border-radius:50px;
-  border:none;
-  background:linear-gradient(120deg,#ff3c00,#ff7a00);
-  color:#fff;
-  font-weight:600;
-  cursor:pointer;
-  position:relative;
-  overflow:hidden;
-}
-
-/* SHINE EFFECT */
-.hero-btn::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
-  transition:0.6s;
-}
-
-.hero-btn:hover::after{
-  left:100%;
-}
-
-/* SCROLL ARROW */
-.scroll-indicator{
-  position:absolute;
-  bottom:20px;
-  font-size:20px;
-  color:#a1a1aa;
-  animation:bounce 2s infinite;
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(10px)}
-}
-
-/* FADE UP */
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-</style>
-
-<!-- BACKGROUND TEXT -->
-<div class="hero-bg">AKAYDA</div>
-
-<!-- FOREGROUND CONTENT -->
-<div class="hero-content">
-  <div class="hero-title">AKAYDA STREETWEAR</div>
-  <div class="hero-sub">Built for Confidence. Designed for Men.</div>
-
-  <div class="hero-cta">
-    <a href="/collections/all">
-      <button class="hero-btn">SHOP NOW</button>
-    </a>
-  </div>
-</div>
-
-<!-- SCROLL -->
-<div class="scroll-indicator">↓</div>
-
-<script>
-// Smooth scroll (optional if anchor used later)
-document.querySelector('.scroll-indicator').addEventListener('click',()=>{
-  window.scrollTo({
-    top:window.innerHeight,
-    behavior:'smooth'
-  });
-});
-</script>
-
-</div>
-<section class="akayda-collections">
-
-<style>
-.akayda-collections{
-  padding:100px 20px;
-  background:#0a0a0f;
-  color:#fff;
-  font-family:'Inter',sans-serif;
-}
-
-/* TITLE */
-.ak-title{
-  font-size:clamp(1.5rem,3vw,2.2rem);
-  font-weight:600;
-  letter-spacing:2px;
-  margin-bottom:40px;
-}
-
-/* SCROLL ROW */
-.ak-row{
-  display:flex;
-  gap:24px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-  padding-bottom:10px;
-}
-
-.ak-row::-webkit-scrollbar{
-  display:none;
-}
-
-/* CARD */
-.ak-card{
-  min-width:280px;
-  height:380px;
-  border-radius:24px;
-  overflow:hidden;
-  position:relative;
-  flex-shrink:0;
-  scroll-snap-align:start;
-
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter:blur(20px);
-
-  transition:0.4s ease;
-}
-
-/* IMAGE */
-.ak-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.6s ease;
-}
-
-/* DARK OVERLAY */
-.ak-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  padding:24px;
-}
-
-/* TEXT */
-.ak-name{
-  font-size:1.3rem;
-  font-weight:600;
-  letter-spacing:1px;
-}
-
-.ak-sub{
-  font-size:0.9rem;
-  color:#a1a1aa;
-  margin-top:6px;
-  opacity:0;
-  transform:translateY(10px);
-  transition:0.4s ease;
-}
-
-/* HOVER EFFECT */
-.ak-card:hover{
-  transform:translateY(-10px) scale(1.02);
-  border-color:rgba(255,255,255,0.25);
-  box-shadow:0 0 30px rgba(255,255,255,0.05);
-}
-
-.ak-card:hover img{
-  transform:scale(1.1);
-}
-
-.ak-card:hover .ak-sub{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .ak-card{
-    min-width:230px;
-    height:320px;
-  }
-}
-</style>
-
-<div class="ak-title">SHOP BY COLLECTION</div>
-
-<div class="ak-row">
-
-  <a href="/collections/akayda-designs" class="ak-card">
-    <img src="https://via.placeholder.com/400x500">
-    <div class="ak-overlay">
-      <div class="ak-name">AKAYDA DESIGNS</div>
-      <div class="ak-sub">Signature Pieces</div>
-    </div>
-  </a>
-
-  <a href="/collections/minimalistic" class="ak-card">
-    <img src="https://via.placeholder.com/400x500">
-    <div class="ak-overlay">
-      <div class="ak-name">MINIMAL</div>
-      <div class="ak-sub">Clean. Sharp. Essential.</div>
-    </div>
-  </a>
-
-  <a href="/collections/anime" class="ak-card">
-    <img src="https://via.placeholder.com/400x500">
-    <div class="ak-overlay">
-      <div class="ak-name">ANIME</div>
-      <div class="ak-sub">Culture Driven Graphics</div>
-    </div>
-  </a>
-
-  <a href="/collections/typography" class="ak-card">
-    <img src="https://via.placeholder.com/400x500">
-    <div class="ak-overlay">
-      <div class="ak-name">TYPOGRAPHY</div>
-      <div class="ak-sub">Words That Hit</div>
-    </div>
-  </a>
-
-  <a href="/collections/heavy-graphics" class="ak-card">
-    <img src="https://via.placeholder.com/400x500">
-    <div class="ak-overlay">
-      <div class="ak-name">HEAVY GRAPHICS</div>
-      <div class="ak-sub">Bold Statement Wear</div>
-    </div>
-  </a>
-
-</div>
-
-</section>
-<section class="ak-products">
-
-<style>
-.ak-products{
-  padding:110px 20px;
-  background:#0a0a0f;
-  color:#fff;
-  font-family:'Inter',sans-serif;
-  max-width:1400px;
-  margin:auto;
-}
-
-/* TITLE */
-.ak-products-title{
-  font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:600;
-  letter-spacing:2px;
-  margin-bottom:50px;
-}
-
-/* GRID */
-.ak-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:26px;
-}
-
-/* CARD */
-.ak-product{
-  position:relative;
-  border-radius:22px;
-  overflow:hidden;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  backdrop-filter:blur(20px);
-  transition:0.4s ease;
-}
-
-/* IMAGE WRAP */
-.ak-img-wrap{
-  position:relative;
-  overflow:hidden;
-}
-
-/* IMAGES */
-.ak-img{
-  width:100%;
-  aspect-ratio:4/5;
-  object-fit:cover;
-  transition:0.6s ease;
-}
-
-.ak-img.second{
-  position:absolute;
-  top:0;
-  left:0;
-  opacity:0;
-}
-
-/* INFO */
-.ak-info{
-  padding:16px;
-}
-
-.ak-name{
-  font-size:0.95rem;
-  font-weight:500;
-  letter-spacing:0.5px;
-}
-
-.ak-price{
-  font-size:0.9rem;
-  color:#a1a1aa;
-  margin-top:4px;
-}
-
-/* QUICK ADD */
-.ak-quick{
-  position:absolute;
-  bottom:-70px;
-  left:50%;
-  transform:translateX(-50%);
-  width:85%;
-  padding:12px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(120deg,#ff3c00,#ff7a00);
-  color:#fff;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.4s ease;
-  box-shadow:0 0 20px rgba(255,60,0,0.2);
-}
-
-/* HOVER */
-.ak-product:hover{
-  transform:translateY(-10px) scale(1.02);
-  border-color:rgba(255,255,255,0.2);
-  box-shadow:0 10px 40px rgba(0,0,0,0.6);
-}
-
-/* IMAGE SWAP */
-.ak-product:hover .ak-img.main{
-  opacity:0;
-}
-
-.ak-product:hover .ak-img.second{
-  opacity:1;
-}
-
-/* ZOOM */
-.ak-product:hover .ak-img{
-  transform:scale(1.08);
-}
-
-/* BUTTON SLIDE */
-.ak-product:hover .ak-quick{
-  bottom:20px;
-}
-
-/* MOBILE */
-@media(max-width:1024px){
-  .ak-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-  .ak-grid{
-    grid-template-columns:1fr;
-  }
-}
-</style>
-
-<div class="ak-products-title">BEST SELLERS</div>
-
-<div class="ak-grid">
-
-{% for product in collections['best-sellers'].products limit:8 %}
-  <div class="ak-product">
-
-    <div class="ak-img-wrap">
-      <img class="ak-img main" src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
-
-      {% if product.images.size > 1 %}
-      <img class="ak-img second" src="{{ product.images[1] | img_url: '800x' }}">
-      {% endif %}
-    </div>
-
-    <div class="ak-info">
-      <div class="ak-name">{{ product.title }}</div>
-      <div class="ak-price">{{ product.price | money }}</div>
-    </div>
-
-    <form method="post" action="/cart/add">
-      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-      <button class="ak-quick">Quick Add</button>
-    </form>
-
-  </div>
-{% endfor %}
-
-</div>
-
-
-</section>
-<section class="ak-insta">
-
-<style>
-.ak-insta{
-  padding:100px 20px;
-  background:#0a0a0f;
-  color:#fff;
-  font-family:'Inter',sans-serif;
-  max-width:1400px;
-  margin:auto;
-}
-
-/* TITLE */
-.ak-insta-title{
-  font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:600;
-  letter-spacing:2px;
-  margin-bottom:40px;
-}
-
-/* GRID */
-.ak-insta-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
-/* CARD */
-.ak-insta-card{
-  position:relative;
-  overflow:hidden;
-  border-radius:16px;
-  background:#111;
-}
-
-/* IMAGE */
-.ak-insta-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.6s ease;
-}
-
-/* OVERLAY */
-.ak-insta-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  opacity:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:0.4s ease;
-}
-
-/* ICON */
-.ak-insta-overlay span{
-  font-size:14px;
-  letter-spacing:1px;
-  border:1px solid rgba(255,255,255,0.3);
-  padding:8px 16px;
-  border-radius:30px;
-}
-
-/* HOVER */
-.ak-insta-card:hover img{
-  transform:scale(1.1);
-}
-
-.ak-insta-card:hover .ak-insta-overlay{
-  opacity:1;
-}
-
-/* CTA */
-.ak-insta-cta{
-  margin-top:40px;
-  text-align:center;
-}
-
-.ak-insta-btn{
-  padding:14px 32px;
-  border-radius:30px;
-  border:1px solid rgba(255,255,255,0.2);
-  background:transparent;
-  color:#fff;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.ak-insta-btn:hover{
+body{
+  font-family:'Outfit', sans-serif;
   background:#fff;
   color:#000;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  .ak-insta-grid{
-    grid-template-columns:1fr 1fr;
-  }
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
 }
-</style>
 
-<div class="ak-insta-title">FROM INSTAGRAM</div>
+/* REQUIRED FOR ANIMATION */
+.hero-container{
+  width:100%;
+  height:100%;
+  position:relative;
+  perspective:900px;
+}
 
-<div class="ak-insta-grid">
+/* HERO BG (UNCHANGED) */
+.hero-bg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-size:18vw;
+  font-weight:900;
+  color:rgba(0,0,0,0.15);
+  white-space:nowrap;
+  z-index:1;
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+  transform:translate(-50%, -50%) scale(1) translateZ(0);
+  opacity:0;
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+  animation:akaydaSmooth 5s cubic-bezier(0.65,0,0.35,1) forwards;
+}
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+/* ORIGINAL KEYFRAMES */
+@keyframes akaydaSmooth{
+  0%{opacity:0; transform:translate(-50%,-60%) scale(0.9) translateZ(0);}
+  15%{opacity:1; transform:translate(-50%,-50%) scale(1) translateZ(0);}
+  30%{transform:translate(-50%,-50%) scale(1) translateZ(0);}
+  55%{transform:translate(-50%,-50%) scale(2) translateZ(400px);}
+  70%{transform:translate(-50%,-50%) scale(3) translateZ(900px); opacity:0;}
+  85%{transform:translate(-50%,-50%) scale(0.8) translateZ(-100px); opacity:0;}
+  100%{transform:translate(-50%,-50%) scale(1) translateZ(0); opacity:1;}
+}
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+/* TITLE (CENTER ON BG) */
+.hero-title{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index:2;
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+  font-family:'Inter', sans-serif;
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  font-weight:800;
+  text-align:center;
+  width:90%;
+}
 
-  <a href="#" class="ak-insta-card">
-    <img src="https://via.placeholder.com/500">
-    <div class="ak-insta-overlay"><span>VIEW</span></div>
-  </a>
+/* SUBTITLE (BELOW BG) */
+.hero-sub{
+  position:absolute;
+  top:68%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
 
-</div>
+  text-align:center;
+  width:90%;
+  max-width:600px;
+  color:#555;
+}
 
-<div class="ak-insta-cta">
-  <a href="https://instagram.com/kousei_x31" target="_blank">
-    <button class="ak-insta-btn">FOLLOW @AKAYDA</button>
-  </a>
-</div>
+/* BUTTON (BOTTOM) */
+.btn{
+  position:absolute;
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
 
-</section>
-<footer class="ak-footer">
-
-<style>
-.ak-footer{
-  background:#0a0a0f;
+  padding:14px 36px;
+  border:none;
+  border-radius:50px;
+  background:#000;
   color:#fff;
-  padding:80px 20px 40px;
-  font-family:'Inter',sans-serif;
-  border-top:1px solid rgba(255,255,255,0.08);
+  cursor:pointer;
 }
 
-/* CONTAINER */
-.ak-footer-wrap{
-  max-width:1400px;
+/* ================= COLLECTIONS ================= */
+section{
+  padding:100px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.row{
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  margin-top:30px;
+}
+
+.card{
+  min-width:260px;
+  height:360px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  border:1px solid #eee;
+}
+
+.card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:20px;
+  background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.name{color:#fff;font-weight:600;}
+.sub{color:#ddd;font-size:.85rem;}
+
+.card:hover img{transform:scale(1.1);}
+
+/* ================= PRODUCTS ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.product{
+  border:1px solid #eee;
+  border-radius:20px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.product img{
+  width:100%;
+}
+
+.product:hover{
+  transform:translateY(-10px);
+}
+
+.info{padding:15px;}
+.price{color:#666;}
+
+/* ================= FOOTER (UNCHANGED STYLE) ================= */
+/* ================= FOOTER ================= */
+.ak-footer{
+  padding:100px 20px 40px;
+  border-top:1px solid #e5e5e5;
+  background:#fff; /* 🔥 keeps theme consistent */
+}
+
+/* GRID */
+.footer-wrap{
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:40px;
+  gap:50px;
 }
 
 /* BRAND */
-.ak-brand{
-  max-width:320px;
-}
-
-.ak-logo{
-  font-size:1.5rem;
+.footer-brand .logo{
+  font-size:1.6rem;
   font-weight:700;
-  letter-spacing:2px;
 }
 
-.ak-desc{
-  margin-top:14px;
-  color:#a1a1aa;
+.footer-brand p{
+  margin-top:15px;
+  color:#666;
   font-size:0.9rem;
   line-height:1.6;
 }
 
 /* HEADINGS */
 .ak-footer h4{
+  margin-bottom:12px;
   font-size:0.9rem;
   letter-spacing:1px;
-  margin-bottom:14px;
+  color:#000;
 }
 
 /* LINKS */
 .ak-footer a{
   display:block;
+  color:#666;
   text-decoration:none;
-  color:#a1a1aa;
   font-size:0.85rem;
   margin-bottom:10px;
   transition:0.3s;
 }
 
 .ak-footer a:hover{
-  color:#fff;
+  color:#000;
 }
 
 /* BOTTOM */
-.ak-bottom{
-  margin-top:50px;
+.footer-bottom{
+  margin-top:60px;
   padding-top:20px;
-  border-top:1px solid rgba(255,255,255,0.08);
+  border-top:1px solid #eee;
   text-align:center;
   font-size:0.8rem;
-  color:#6b7280;
+  color:#888;
 }
 
-/* MOBILE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
-  .ak-footer-wrap{
+  .footer-wrap{
     grid-template-columns:1fr 1fr;
     gap:30px;
   }
 }
 
 @media(max-width:600px){
-  .ak-footer-wrap{
+  .footer-wrap{
     grid-template-columns:1fr;
   }
 }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .footer-wrap{grid-template-columns:1fr 1fr;}
+}
+
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .footer-wrap{grid-template-columns:1fr;}
+}
+
+/* HERO MOBILE */
+@media(max-width:768px){
+  .hero-sub{top:72%;}
+  .btn{bottom:35px;}
+}
+
+@media(max-width:480px){
+  .hero-sub{top:75%;}
+  .btn{bottom:25px;}
+}
+
 </style>
+</head>
 
-<div class="ak-footer-wrap">
+<body>
 
-  <!-- BRAND -->
-  <div class="ak-brand">
-    <div class="ak-logo">AKAYDA</div>
-    <div class="ak-desc">
-      Built for confidence. Designed for men.  
-      Premium 240 GSM streetwear crafted in India.
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-container">
+
+    <div class="hero-bg">AKAYDA</div>
+
+    <h1 class="hero-title">AKAYDA STREETWEAR</h1>
+    <p class="hero-sub">Built for Confidence. Designed for Men.</p>
+    <button class="btn">SHOP NOW</button>
+
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="container">
+  <h2>SHOP BY COLLECTION</h2>
+
+  <div class="row">
+    <div class="card">
+      <img src="https://via.placeholder.com/400">
+      <div class="overlay">
+        <div class="name">AKAYDA DESIGNS</div>
+        <div class="sub">Signature Pieces</div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- SHOP -->
-  <div>
-    <h4>SHOP</h4>
-    <a href="/collections/all">All Products</a>
-    <a href="/collections/new">New Drop</a>
-    <a href="/collections/oversized">Oversized</a>
-    <a href="/collections/graphic">Graphic</a>
+<!-- PRODUCTS -->
+<section class="container">
+  <h2>BEST SELLERS</h2>
+
+  <div class="grid">
+    <div class="product">
+      <img src="https://via.placeholder.com/400">
+      <div class="info">
+        <div>Oversized Tee</div>
+        <div class="price">₹1,299</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ak-footer">
+
+  <div class="footer-wrap">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <div class="logo">AKAYDA</div>
+      <p>
+        Built for confidence. Designed for men.  
+        Premium streetwear crafted for those who stand different.
+      </p>
+    </div>
+
+    <!-- ABOUT -->
+    <div>
+      <h4>ABOUT</h4>
+      <a href="#">About Us</a>
+      <a href="#">Our Story</a>
+    </div>
+
+    <!-- SUPPORT -->
+    <div>
+      <h4>SUPPORT</h4>
+      <a href="#">Size Guide</a>
+      <a href="#">Shipping & Returns</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- CONTACT -->
+    <div>
+      <h4>CONTACT</h4>
+      <a href="#">Contact Us</a>
+      <a href="mailto:your@email.com">your@email.com</a>
+      <a href="#">Instagram</a>
+    </div>
+
   </div>
 
-  <!-- SUPPORT -->
-  <div>
-    <h4>SUPPORT</h4>
-    <a href="/pages/about-us">About Us</a>
-    <a href="/pages/size-guide">Size Guide</a>
-    <a href="/pages/shipping&returns">Shipping & Returns</a>
-    <a href="/pages/faq">FAQ</a>
+  <div class="footer-bottom">
+    © 2026 AKAYDA. All rights reserved.
   </div>
-
-  <!-- CONTACT -->
-  <div>
-    <h4>CONTACT</h4>
-    <a href="/pages/contact">Contact Us</a>
-    <a href="mailto:your@email.com">your@email.com</a>
-    <a href="#">Instagram</a>
-  </div>
-
-</div>
-
-<div class="ak-bottom">
-  © 2026 AKAYDA. All rights reserved.
-</div>
 
 </footer>
+
+</body>
+</html>
